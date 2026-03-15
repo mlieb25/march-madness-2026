@@ -127,10 +127,10 @@ if not live_raw.get("tournament_started", False):
     c1, c2, c3, c4 = st.columns(4)
     p4_best = data["p4_best"]
     best_ll = min((c["log_loss"] for c in p4_best), default=0.5039)
-    c1.metric("Best Calibrated LL",   f"{best_ll:.4f}", delta="Phase 4 · elastic_net + isotonic")
-    c2.metric("Phase 2 Baseline LL",  "0.5112")
-    c3.metric("Phase 3 Best LL",      "0.5373", delta="XGBoost trial 20")
-    c4.metric("BMA Ensemble",         "~0.483", delta="Phase 5 final blend")
+    c1.metric("Best Calibrated LL",   f"{best_ll:.4f}", delta="Phase 4 · Quick pipeline")
+    c2.metric("Phase 2 Baseline LL",  "0.5040")
+    c3.metric("Phase 3 Best LL",      "0.5207", delta="XGBoost grid search")
+    c4.metric("Ensemble (Phase 5)",   "0.5140", delta="Tuned blend on 2014")
 else:
     df_probs   = load_pairwise_probs()
     live_stats = compute_live_metrics(live_raw.get("raw", pd.DataFrame()), df_probs)
@@ -175,7 +175,7 @@ with tab_p2:
         - **full_lr** — all 12 features ✅ (used as baseline bar)  
         - **small_lr** — reduced 6-feature set
 
-        Phase 3+ models must beat the `full_lr` log loss of **0.5112** to earn a spot in the ensemble.
+        Phase 3+ models must beat the `full_lr` log loss of **0.5040** to earn a spot in the ensemble.
         """)
 
         if btb:

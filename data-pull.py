@@ -65,10 +65,10 @@ def validate_torvik_schema(df):
     if df.empty:
         return
     for idx, name in TORVIK_REQUIRED_COLS.items():
-        if idx not in df.columns and idx not in range(len(df.columns)):
+        if idx not in df.columns:
             raise ValueError(
                 f"Torvik schema validation failed: expected column index {idx} ({name}). "
-                f"Columns: {list(df.columns)[:10]}..."
+                f"Columns: {list(df.columns)[:15]}..."
             )
     print("  Torvik schema validated.")
 

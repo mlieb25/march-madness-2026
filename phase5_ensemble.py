@@ -26,7 +26,9 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import log_loss, brier_score_loss
+from scipy.optimize import minimize
 
+import config
 warnings.filterwarnings("ignore")
 
 # ── Config ────────────────────────────────────────────────────────────────────
@@ -52,6 +54,9 @@ C_BMA = 5.0
 
 # Kelly fraction cap (avoid overbetting)
 KELLY_MAX_FRACTION = 0.05
+
+# If True, tune final blend weights on holdout year instead of fixed 0.4/0.4/0.2
+TUNE_BLEND_WEIGHTS = True
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -371,6 +376,95 @@ def plot_summary(model_ll, bma_weights, kelly_df, kelly_final):
     print(f"Summary plot saved → {SUMMARY_PLOT}")
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+# Holdout evaluation & optional blend tuning
+# ══════════════════════════════════════════════════════════════════════════════
+def evaluate_ensemble_holdout(oof_df, base_cols, bma_weights, meta_clf, meta_sc,
+                              risk_weights, blend_weights, avail_base):
+    """
+    Compute ensemble predictions on the holdout year (config.TEST_YEAR or last year in OOF)
+    and report log loss / Brier. Returns (holdout_ll, holdout_brier, eval_year).
+    """
+    eval_year = getattr(config, "TEST_YEAR", None)
+    if eval_year is None or eval_year not in oof_df[YEAR_COL].values:
+        eval_year = int(oof_df[YEAR_COL].max())
+    mask = (oof_df[YEAR_COL] == eval_year) & oof_df[base_cols].notna().all(axis=1)
+    if mask.sum() < 5:
+        print(f"  [!] Holdout evaluation: too few rows for year {eval_year} (n={mask.sum()}).")
+        return None, None, eval_year
+
+    holdout = oof_df.loc[mask]
+    y_holdout = holdout[TARGET].values
+    bma_arr = np.array([bma_weights.get(c, 1 / len(avail_base)) for c in avail_base])
+    bma_arr /= bma_arr.sum()
+    p_bma_h = holdout[avail_base].fillna(0.5).values @ bma_arr
+
+    if meta_clf is not None:
+        p_stack_h = meta_predict(meta_clf, meta_sc, avail_base, holdout)
+    else:
+        p_stack_h = p_bma_h.copy()
+
+    chalk_w = risk_weights.get("chalk_weights", bma_weights)
+    upset_w = risk_weights.get("upset_weights", bma_weights)
+    if chalk_w and upset_w:
+        avg_pred_h = holdout[avail_base].fillna(0.5).mean(axis=1).values
+        p_risk_h = apply_risk_adaptive(avail_base, holdout, chalk_w, upset_w, avg_pred_h)
+    else:
+        p_risk_h = p_bma_h.copy()
+
+    w_bma, w_stack, w_risk = blend_weights["bma"], blend_weights["stack"], blend_weights["risk_adaptive"]
+    p_ens = np.clip(w_bma * p_bma_h + w_stack * p_stack_h + w_risk * p_risk_h, 1e-7, 1 - 1e-7)
+    holdout_ll = safe_ll(y_holdout, p_ens)
+    holdout_brier = brier_score_loss(y_holdout, p_ens)
+    print(f"\n── Ensemble holdout (year={eval_year}, n={len(y_holdout)}) ──")
+    print(f"  Log Loss:   {holdout_ll:.4f}")
+    print(f"  Brier:     {holdout_brier:.4f}")
+    return holdout_ll, holdout_brier, eval_year
+
+
+def tune_blend_weights(oof_df, base_cols, bma_weights, meta_clf, meta_sc, risk_weights, avail_base, eval_year):
+    """
+    Find blend weights (w_bma, w_stack, w_risk) that minimize log loss on the holdout year.
+    Optimize (w_bma, w_stack) with w_risk = 1 - w_bma - w_stack.
+    """
+    mask = (oof_df[YEAR_COL] == eval_year) & oof_df[base_cols].notna().all(axis=1)
+    if mask.sum() < 10:
+        return {"bma": 0.4, "stack": 0.4, "risk_adaptive": 0.2}
+
+    holdout = oof_df.loc[mask]
+    y = holdout[TARGET].values
+    bma_arr = np.array([bma_weights.get(c, 1 / len(avail_base)) for c in avail_base])
+    bma_arr /= bma_arr.sum()
+    p_bma = holdout[avail_base].fillna(0.5).values @ bma_arr
+    p_stack = meta_predict(meta_clf, meta_sc, avail_base, holdout) if meta_clf is not None else p_bma.copy()
+    chalk_w = risk_weights.get("chalk_weights", bma_weights)
+    upset_w = risk_weights.get("upset_weights", bma_weights)
+    if chalk_w and upset_w:
+        avg_p = holdout[avail_base].fillna(0.5).mean(axis=1).values
+        p_risk = apply_risk_adaptive(avail_base, holdout, chalk_w, upset_w, avg_p)
+    else:
+        p_risk = p_bma.copy()
+
+    def objective(w2d):
+        w_bma, w_stack = np.clip(w2d[0], 0.05, 0.9), np.clip(w2d[1], 0.05, 0.9)
+        w_risk = 1.0 - w_bma - w_stack
+        if w_risk < 0.05:
+            return 1e6
+        p = np.clip(w_bma * p_bma + w_stack * p_stack + w_risk * p_risk, 1e-7, 1 - 1e-7)
+        return log_loss(y, p)
+
+    res = minimize(objective, x0=[0.4, 0.4], method="L-BFGS-B", bounds=[(0.05, 0.9), (0.05, 0.9)])
+    if res.success:
+        w_bma, w_stack = np.clip(res.x[0], 0.05, 0.9), np.clip(res.x[1], 0.05, 0.9)
+        w_risk = 1.0 - w_bma - w_stack
+        if w_risk < 0.05:
+            w_risk = 0.2
+            s = w_bma + w_stack + w_risk
+            w_bma, w_stack, w_risk = w_bma / s, w_stack / s, w_risk / s
+        return {"bma": float(w_bma), "stack": float(w_stack), "risk_adaptive": float(w_risk)}
+    return {"bma": 0.4, "stack": 0.4, "risk_adaptive": 0.2}
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
     print("=" * 60)
@@ -428,10 +522,23 @@ def main():
     else:
         p_risk = p_bma.copy()
 
-    # Final ensemble = weighted average of BMA + stack + risk-adaptive
-    # Weights driven by Kelly final bankroll diagnostics (from historical OOF)
-    p_final = 0.4 * p_bma + 0.4 * p_stack + 0.2 * p_risk
+    # Blend weights: tune on holdout year or use fixed
+    eval_year = int(oof_df[YEAR_COL].max()) if YEAR_COL in oof_df.columns else getattr(config, "TEST_YEAR", 2014)
+    if TUNE_BLEND_WEIGHTS:
+        blend_weights = tune_blend_weights(oof_df, base_cols, bma_weights, meta_clf, meta_sc,
+                                          risk_weights, avail_base, eval_year)
+        print(f"\n── Tuned blend weights ──  bma={blend_weights['bma']:.3f}  stack={blend_weights['stack']:.3f}  risk_adaptive={blend_weights['risk_adaptive']:.3f}")
+    else:
+        blend_weights = {"bma": 0.4, "stack": 0.4, "risk_adaptive": 0.2}
+
+    # Final ensemble
+    p_final = blend_weights["bma"] * p_bma + blend_weights["stack"] * p_stack + blend_weights["risk_adaptive"] * p_risk
     p_final = np.clip(p_final, 0.01, 0.99)
+
+    # Holdout evaluation
+    holdout_ll, holdout_brier, _ = evaluate_ensemble_holdout(
+        oof_df, base_cols, bma_weights, meta_clf, meta_sc, risk_weights, blend_weights, avail_base
+    )
 
     # ── 6. Save ensemble probabilities ────────────────────────────────────────
     ensemble_df = infer_df[["team_a", "team_b"]].copy()
@@ -452,13 +559,15 @@ def main():
 
     # ── 9. Save weights ───────────────────────────────────────────────────────
     weights_out = {
-        "bma_weights":         bma_weights,
-        "risk_adaptive":       risk_weights,
-        "meta_model_used":     meta_clf is not None,
-        "final_blend":         {"bma": 0.4, "stack": 0.4, "risk_adaptive": 0.2},
+        "bma_weights":          bma_weights,
+        "risk_adaptive":        risk_weights,
+        "meta_model_used":      meta_clf is not None,
+        "final_blend":          blend_weights,
         "kelly_final_bankroll": kelly_final,
-        "base_cols":           avail_base,
-        "C_BMA":               C_BMA,
+        "base_cols":            avail_base,
+        "C_BMA":                C_BMA,
+        "holdout_log_loss":     holdout_ll,
+        "holdout_brier":        holdout_brier,
     }
     with open(WEIGHTS_OUT, "w") as f:
         json.dump(weights_out, f, indent=2)

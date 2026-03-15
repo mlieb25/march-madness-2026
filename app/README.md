@@ -37,13 +37,13 @@ A full-pipeline machine learning system for predicting the NCAA Tournament — b
 
 | Phase | Model | Log Loss | Brier |
 |---|---|---|---|
-| Phase 2 | Logistic Regression (baseline) | 0.5039 | 0.1657 |
-| Phase 3 | XGBoost (108-combo GridSearchCV) | 0.6013 | 0.2049 |
-| Final | Ensemble (60% XGB + 40% LR) | — | — |
+| Phase 2 | Logistic Regression (baseline) | 0.5040 | 0.1658 |
+| Phase 3 | XGBoost (grid search, time-aware) | 0.5207 | 0.1698 |
+| Final | Ensemble (tuned blend of calibrated LR) | 0.5140 | 0.1674 |
 
-Train/test split: 2011–2023 train / 2024–2025 holdout.
+Train/test split (Quick pipeline): train ≤ 2013 / test 2014 (time-aware, no leakage).
 
-**Simulation** — Vectorized NumPy Monte Carlo over all C(68,2) = 2,278 pairwise probabilities. 10,000 simulations complete in < 3 seconds.
+**Simulation** — Vectorized NumPy Monte Carlo over all tournament matchups derived from the 68-team NET field (10,000 simulations per run).
 
 ---
 

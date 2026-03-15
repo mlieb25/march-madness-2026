@@ -448,12 +448,12 @@ def load_experiment_results() -> dict:
     p2_path = DATA_DIR / "phase2_bar_to_beat.json"
     if p2_path.exists():
         btb     = json.loads(p2_path.read_text())
-        full_ll = btb.get("log_loss_raw", {}).get("full_lr", 0.5112)
-        full_bs = btb.get("brier_raw",    {}).get("full_lr", 0.1732)
+        full_ll = btb.get("log_loss_raw", {}).get("full_lr", 0.5040)
+        full_bs = btb.get("brier_raw",    {}).get("full_lr", 0.1658)
     else:
         btb     = {}
-        full_ll = 0.5112
-        full_bs = 0.1732
+        full_ll = 0.5040
+        full_bs = 0.1658
     out["phase2"] = {
         "model":       "Logistic Regression (baseline)",
         "log_loss":    full_ll,
@@ -470,11 +470,11 @@ def load_experiment_results() -> dict:
         best_p3    = min(all_trials, key=lambda t: t["cv_log_loss"]) if all_trials else {}
     else:
         p3_top  = {}
-        best_p3 = {"cv_log_loss": 0.5373, "family": "xgboost", "trial": 20}
+        best_p3 = {"cv_log_loss": 0.5876, "family": "xgboost", "trial": 1}
     out["phase3"] = {
         "model":       f"{best_p3.get('family','xgboost')} (trial {best_p3.get('trial',20)})",
-        "log_loss":    best_p3.get("cv_log_loss", 0.5373),
-        "brier_score": 0.1792,
+        "log_loss":    best_p3.get("cv_log_loss", 0.5876),
+        "brier_score": 0.1698,
         "split":       "Train ≤2013 / Test 2014",
         "top_models":  p3_top,
     }
@@ -486,8 +486,8 @@ def load_experiment_results() -> dict:
         best_p4 = min(p4_best, key=lambda c: c["log_loss"]) if p4_best else {}
     else:
         p4_best = []
-        best_p4 = {"family": "elastic_net", "calibrator": "isotonic",
-                   "log_loss": 0.4806, "brier": 0.1592}
+        best_p4 = {"family": "logistic", "calibrator": "isotonic",
+                   "log_loss": 0.5244, "brier": 0.1684}
     out["phase4"] = {
         "best_combos": p4_best,
         "best_log_loss": best_p4.get("log_loss", 0.4806),

@@ -1,0 +1,11 @@
+{
+  "files": {
+    "barttorvik_historical.csv": "46c3b7291cff5e2b8d37e92af447b1d40e97c15370dbfbf67ae9fca263365a43",
+    "barttorvik_adv_2026.csv": "7a70a2ecbf99295a8a8022172cb82828f5e9529933489c03bbc7d56de5f26486",
+    "massey_teams.csv": "36948dd88d56160077d18b3d0083ac2f96787c8126847622ed23e01f9a0ce439",
+    "ncaa_net.csv": "23bc7a583e5214919eca8d4e581694afd7d22cef07e75061889e8d2bfe61bc01",
+    "fivethirtyeight_forecasts.csv": "9417e6c437a8c31b039684f48ad0e3f0f82444e1204c14407361d7af751b3a41",
+    "warrennolan_net.csv": "7311201dd03615e1a0cf7f1d14a630e52559fd49ac8fe348b1b18c8d062c01f8"
+  },
+  "note": "SHA-256 of each file after pull"
+}

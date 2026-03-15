@@ -1,6 +1,9 @@
 """
-Phase 4 — Calibration & Probabilistic Sharpness
-=================================================
+Phase 4 (Full pipeline) — Calibration & Probabilistic Sharpness
+================================================================
+This script belongs to the Full pipeline: phase3_model_search.py → phase4_calibration.py → phase5.
+For the Quick pipeline (models.py → phase4.py), use phase4.py instead.
+
 Reads:  data/ml_training_data.csv
         data/phase3_top_models.json
         data/ml_inference_data_2026.csv

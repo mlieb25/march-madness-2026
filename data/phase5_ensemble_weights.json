@@ -1,37 +1,29 @@
 {
   "bma_weights": {
-    "lightgbm_isotonic": 0.3668370888475089,
-    "elastic_net_beta": 0.3110613913557218,
-    "gp_beta": 0.3221015197967694
+    "logistic_isotonic": 1.0
   },
   "risk_adaptive": {
     "chalk_weights": {
-      "lightgbm_isotonic": 0.37024049262022074,
-      "elastic_net_beta": 0.30178644672381366,
-      "gp_beta": 0.3279730606559656
+      "logistic_isotonic": 1.0
     },
     "upset_weights": {
-      "lightgbm_isotonic": 0.36520901728908256,
-      "elastic_net_beta": 0.3154360288478018,
-      "gp_beta": 0.3193549538631156
+      "logistic_isotonic": 1.0
     }
   },
   "meta_model_used": true,
   "final_blend": {
-    "bma": 0.4,
-    "stack": 0.4,
-    "risk_adaptive": 0.2
+    "bma": 0.40000016551939704,
+    "stack": 0.45931366692875963,
+    "risk_adaptive": 0.14068616755184338
   },
   "kelly_final_bankroll": {
-    "lightgbm_isotonic": 47.1149,
-    "elastic_net_beta": 28.0764,
-    "gp_beta": 30.2906,
-    "bma_ensemble": 42.5831
+    "logistic_isotonic": 139.0487,
+    "bma_ensemble": 139.0487
   },
   "base_cols": [
-    "lightgbm_isotonic",
-    "elastic_net_beta",
-    "gp_beta"
+    "logistic_isotonic"
   ],
-  "C_BMA": 5.0
+  "C_BMA": 5.0,
+  "holdout_log_loss": 0.5139501842132023,
+  "holdout_brier": 0.16741028783221598
 }

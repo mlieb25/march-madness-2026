@@ -11,6 +11,12 @@ Writes: data/phase6_team_round_probs.csv    — P(team reaches each round)
         data/phase6_simulation_plots.png    — round reach + EV plots
         data/phase6_simulation_raw.csv      — sampled tournament outcomes (10k rows)
 
+Seed/team alignment: Ensemble probs use team_a/team_b names (from Phase 1 ETL / NCAA NET).
+Phase 6 seed map comes from Kaggle MNCAATourneySeeds (TeamID → name) or NET fallback.
+For correct lookup, bracket team names must match the names in phase5_ensemble_probs.csv
+(e.g. same spelling as in data/ncaa_net.csv or Kaggle MTeams). Unknown matchups default
+to P(win)=0.5; see validate_prob_coverage() for a coverage check.
+
 Usage:
     python phase6_simulation.py
     python phase6_simulation.py --sims 100000 --scoring 1,2,4,8,16,32
@@ -86,6 +92,28 @@ def build_prob_lookup(ensemble_df):
         return 0.5  # unknown matchup → coin flip
 
     return win_prob
+
+
+def validate_prob_coverage(seed_map, win_prob_fn, threshold=0.90):
+    """
+    Check what fraction of bracket matchup lookups have a non-default (0.5) probability.
+    If below threshold, warn about possible name/ID mismatch between seeds and ensemble.
+    """
+    all_teams = list(seed_map.values())
+    total, known = 0, 0
+    for i in range(len(all_teams)):
+        for j in range(i + 1, len(all_teams)):
+            a, b = all_teams[i], all_teams[j]
+            p = win_prob_fn(a, b)
+            total += 1
+            if abs(p - 0.5) > 0.001:
+                known += 1
+    if total == 0:
+        return
+    frac = known / total
+    print(f"  Bracket matchup coverage: {known}/{total} ({frac:.1%}) with non-default prob")
+    if frac < threshold:
+        print(f"  [!] Coverage below {threshold:.0%} — check seed/team names match phase5_ensemble_probs (e.g. NET or Kaggle MTeams).")
 
 
 # ── Load / build 2026 bracket seeds ──────────────────────────────────────────
@@ -536,6 +564,8 @@ def main():
     # ── Load bracket seeds ────────────────────────────────────────────────────
     seed_map, seed_source = load_seeds()
     print(f"  Seed source: {seed_source}  ({len(seed_map)} slots)")
+
+    validate_prob_coverage(seed_map, win_prob_fn)
 
     n_known = sum(1 for t in seed_map.values() if not t.startswith("TBD"))
     print(f"  Teams with known names: {n_known} / {len(seed_map)}")

@@ -87,9 +87,9 @@
       "UCLA",
       "Tennessee",
       "Louisville",
-      "BYU",
+      "Texas A&M",
       "Michigan St.",
-      "Auburn",
+      "Utah St.",
       "Iowa St.",
       "Florida",
       "Miami (FL)",
@@ -129,11 +129,11 @@
       "Illinois"
     ],
     "5": [
-      "Michigan",
-      "Florida"
+      "Duke",
+      "Illinois"
     ],
     "6": [
-      "Michigan"
+      "Duke"
     ]
   },
   "exploitative": {
@@ -224,9 +224,9 @@
       "UCLA",
       "Tennessee",
       "Louisville",
-      "BYU",
+      "Texas A&M",
       "Michigan St.",
-      "Auburn",
+      "Utah St.",
       "Iowa St.",
       "Florida",
       "Miami (FL)",
@@ -244,7 +244,7 @@
       "Houston",
       "Michigan",
       "Texas Tech",
-      "Saint Mary's (CA)",
+      "Iowa",
       "Gonzaga",
       "Arizona",
       "Tennessee",
@@ -257,20 +257,20 @@
     ],
     "4": [
       "Duke",
-      "Alabama",
+      "Houston",
       "Michigan",
       "Texas Tech",
-      "Arizona",
       "Tennessee",
+      "Iowa St.",
       "Florida",
       "Illinois"
     ],
     "5": [
-      "Michigan",
-      "Florida"
+      "Duke",
+      "Illinois"
     ],
     "6": [
-      "Michigan"
+      "Duke"
     ]
   },
   "high_variance": {
@@ -361,9 +361,9 @@
       "UCLA",
       "Tennessee",
       "Louisville",
-      "BYU",
+      "Texas A&M",
       "Michigan St.",
-      "Auburn",
+      "Utah St.",
       "Iowa St.",
       "NC State",
       "Miami (FL)",
@@ -379,7 +379,7 @@
       "Alabama",
       "Purdue",
       "Houston",
-      "Michigan",
+      "Saint Mary's (CA)",
       "Texas Tech",
       "Iowa",
       "Gonzaga",
@@ -394,20 +394,20 @@
     ],
     "4": [
       "South Fla.",
-      "Alabama",
-      "Iowa",
+      "Houston",
+      "Saint Mary's (CA)",
       "Texas Tech",
-      "Arizona",
       "Tennessee",
+      "Iowa St.",
       "NC State",
       "Illinois"
     ],
     "5": [
-      "Michigan",
-      "Florida"
+      "Duke",
+      "Illinois"
     ],
     "6": [
-      "Michigan"
+      "Duke"
     ]
   }
 }

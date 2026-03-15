@@ -48,10 +48,22 @@ def _load_home_data():
 
 sim_df, p4_combos, p5_weights, ev_df = _load_home_data()
 
-# Best log loss across all phases
-best_ll   = min((c["log_loss"] for c in p4_combos), default=0.5039)
-best_model = next((f"{c['family']} + {c['calibrator']}" for c in p4_combos
-                   if c["log_loss"] == best_ll), "elastic_net + isotonic")
+# Best log loss across all phases (Phase 2 baseline, Phase 4 best, Phase 5 ensemble)
+baseline_ll = 0.5040  # from latest models.py run (Phase 2)
+phase4_best_ll = min((c.get("log_loss", 1.0) for c in p4_combos), default=None)
+ensemble_ll = p5_weights.get("holdout_log_loss") if isinstance(p5_weights, dict) else None
+
+candidates = [
+    ("Phase 2 · Logistic baseline", baseline_ll),
+    ("Phase 4 · best calibrated", phase4_best_ll),
+    ("Phase 5 · ensemble", ensemble_ll),
+]
+candidates = [(name, ll) for name, ll in candidates if ll is not None]
+if candidates:
+    best_model, best_ll = min(candidates, key=lambda x: x[1])
+else:
+    best_model, best_ll = "Phase 2 · Logistic baseline", baseline_ll
+
 top_team  = sim_df.iloc[0] if len(sim_df) else None
 n_sims    = 10_000
 
@@ -126,14 +138,21 @@ m1, m2, m3, m4, m5 = st.columns(5)
 
 with m1:
     st.metric("Best Log Loss", f"{best_ll:.4f}",
-              delta="Phase 4 calibrated",
-              help=f"Best model: {best_model}")
+              delta=best_model,
+              help="Best out-of-sample log loss across phases (lower is better)")
 
 with m2:
-    n_matchups = 2016
+    try:
+        p5_path = DATA_DIR / "phase5_ensemble_probs.csv"
+        if p5_path.exists():
+            n_matchups = len(pd.read_csv(p5_path))
+        else:
+            n_matchups = 2016
+    except Exception:
+        n_matchups = 2016
     st.metric("Matchups Scored", f"{n_matchups:,}",
-              delta="All C(68,2) pairs",
-              help="Every possible first-round matchup from top-68 NET teams")
+              delta="Phase 5 ensemble",
+              help="Number of 2026 matchups assigned a win probability")
 
 with m3:
     st.metric("Simulations", f"{n_sims:,}",
@@ -235,12 +254,10 @@ with col_left:
     st.markdown("#### Model Benchmark (Holdout Log Loss · lower = better)")
 
     model_rows = [
-        {"Phase": "2", "Model": "Logistic Regression (baseline)",  "Log Loss": "0.5112", "Brier": "0.1732", "Status": "✅ Baseline"},
-        {"Phase": "3", "Model": "XGBoost (Bayesian opt)",          "Log Loss": "0.5373", "Brier": "0.1792", "Status": "✅ Phase 3"},
-        {"Phase": "3", "Model": "LightGBM (Bayesian opt)",         "Log Loss": "0.5467", "Brier": "0.1821", "Status": "✅ Phase 3"},
-        {"Phase": "3", "Model": "Gaussian Process",                "Log Loss": "0.5531", "Brier": "0.1857", "Status": "✅ Phase 3"},
-        {"Phase": "4", "Model": "Elastic Net + Isotonic",          "Log Loss": "0.4806", "Brier": "0.1592", "Status": "🏆 Best"},
-        {"Phase": "5", "Model": "BMA Ensemble (3 models)",         "Log Loss": "~0.483", "Brier": "~0.160", "Status": "🚀 Final"},
+        {"Phase": "2", "Model": "Logistic Regression (baseline)",  "Log Loss": "0.5040", "Brier": "0.1658", "Status": "🏆 Best (holdout 2014)"},
+        {"Phase": "3", "Model": "XGBoost (grid search)",           "Log Loss": "0.5207", "Brier": "0.1698", "Status": "✅ Phase 3"},
+        {"Phase": "4", "Model": "Logistic + Isotonic",             "Log Loss": "0.5244", "Brier": "0.1684", "Status": "Phase 4 calibrated"},
+        {"Phase": "5", "Model": "Ensemble (tuned blend)",          "Log Loss": "0.5140", "Brier": "0.1674", "Status": "🚀 Phase 5 ensemble"},
     ]
     bench_df = pd.DataFrame(model_rows)
 

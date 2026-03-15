@@ -1,29 +1,29 @@
 team,seed,region,P(Sweet16),P(Elite8),P(FinalFour)
 South Fla.,13,East,0.2473,0.1197,0.0889
 McNeese,14,Midwest,0.2463,0.1191,0.0859
-Cincinnati,12,Midwest,0.2335,0.0851,0.0452
-Santa Clara,10,Midwest,0.1041,0.0494,0.0204
-Texas,11,West,0.1594,0.0469,0.0185
-Auburn,10,South,0.1457,0.0517,0.0148
-Indiana,11,East,0.108,0.0303,0.0119
-Oklahoma,12,South,0.0892,0.0274,0.0112
-San Diego St.,12,East,0.1451,0.026,0.0107
-Missouri,15,West,0.0932,0.0382,0.0068
-Baylor,13,South,0.0707,0.0188,0.0065
-Virginia Tech,14,South,0.1026,0.0301,0.0062
-SMU,10,East,0.0835,0.0169,0.0061
-Seton Hall,14,West,0.0991,0.0254,0.0055
-Texas A&M,11,South,0.0951,0.0268,0.0054
-Tulsa,13,West,0.0543,0.0126,0.005
-New Mexico,12,West,0.0871,0.0129,0.0049
-Florida St.,16,West,0.0482,0.0149,0.0042
-VCU,11,Midwest,0.106,0.0154,0.0035
-Boise St.,15,Midwest,0.033,0.0125,0.0034
-Belmont,16,South,0.0485,0.0107,0.0032
-West Virginia,15,South,0.0437,0.0108,0.0029
-Stanford,16,East,0.0347,0.013,0.0026
-UCF,13,Midwest,0.0573,0.0137,0.0024
-TCU,10,West,0.0393,0.012,0.0022
-Washington,15,East,0.0314,0.0085,0.002
-Akron,14,East,0.0164,0.0043,0.0006
-Miami (OH),16,Midwest,0.0184,0.0046,0.0004
+Cincinnati,12,Midwest,0.2719,0.1049,0.0534
+Santa Clara,10,Midwest,0.1473,0.0688,0.0303
+SMU,10,East,0.1337,0.0493,0.0283
+Indiana,11,East,0.1458,0.0497,0.0232
+Auburn,10,South,0.1439,0.0581,0.0192
+Texas A&M,11,South,0.1577,0.0445,0.0131
+Texas,11,West,0.1451,0.0368,0.0111
+Oklahoma,12,South,0.0704,0.0217,0.0081
+San Diego St.,12,East,0.077,0.0241,0.0066
+Washington,15,East,0.0643,0.0163,0.0059
+Miami (OH),16,Midwest,0.0622,0.0183,0.005
+UCF,13,Midwest,0.0613,0.0188,0.0047
+Virginia Tech,14,South,0.0721,0.0173,0.0047
+Boise St.,15,Midwest,0.0439,0.0148,0.0046
+VCU,11,Midwest,0.0924,0.0189,0.0043
+Baylor,13,South,0.0466,0.0127,0.0042
+Missouri,15,West,0.0551,0.0183,0.0041
+Stanford,16,East,0.0636,0.0176,0.0037
+West Virginia,15,South,0.0458,0.01,0.0036
+Akron,14,East,0.0409,0.0076,0.0033
+TCU,10,West,0.0445,0.0132,0.0028
+Seton Hall,14,West,0.0702,0.0138,0.0026
+Tulsa,13,West,0.0376,0.0079,0.0022
+Florida St.,16,West,0.039,0.0094,0.0021
+New Mexico,12,West,0.0482,0.0094,0.0019
+Belmont,16,South,0.0394,0.0074,0.0019

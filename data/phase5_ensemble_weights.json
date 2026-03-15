@@ -1,0 +1,37 @@
+{
+  "bma_weights": {
+    "lightgbm_isotonic": 0.3668370888475089,
+    "elastic_net_beta": 0.3110613913557218,
+    "gp_beta": 0.3221015197967694
+  },
+  "risk_adaptive": {
+    "chalk_weights": {
+      "lightgbm_isotonic": 0.37024049262022074,
+      "elastic_net_beta": 0.30178644672381366,
+      "gp_beta": 0.3279730606559656
+    },
+    "upset_weights": {
+      "lightgbm_isotonic": 0.36520901728908256,
+      "elastic_net_beta": 0.3154360288478018,
+      "gp_beta": 0.3193549538631156
+    }
+  },
+  "meta_model_used": true,
+  "final_blend": {
+    "bma": 0.4,
+    "stack": 0.4,
+    "risk_adaptive": 0.2
+  },
+  "kelly_final_bankroll": {
+    "lightgbm_isotonic": 47.1149,
+    "elastic_net_beta": 28.0764,
+    "gp_beta": 30.2906,
+    "bma_ensemble": 42.5831
+  },
+  "base_cols": [
+    "lightgbm_isotonic",
+    "elastic_net_beta",
+    "gp_beta"
+  ],
+  "C_BMA": 5.0
+}

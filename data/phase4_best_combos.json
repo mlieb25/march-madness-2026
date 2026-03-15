@@ -1,0 +1,29 @@
+[
+  {
+    "family": "lightgbm",
+    "calibrator": "isotonic",
+    "log_loss": 0.48389,
+    "brier": 0.16021,
+    "ece": 0.08764,
+    "sharpness": 0.10637,
+    "ll_delta_vs_raw": -0.00802
+  },
+  {
+    "family": "elastic_net",
+    "calibrator": "beta",
+    "log_loss": 0.49712,
+    "brier": 0.16531,
+    "ece": 0.11169,
+    "sharpness": 0.07838,
+    "ll_delta_vs_raw": -0.0013
+  },
+  {
+    "family": "gp",
+    "calibrator": "beta",
+    "log_loss": 0.50377,
+    "brier": 0.16856,
+    "ece": 0.10534,
+    "sharpness": 0.08485,
+    "ll_delta_vs_raw": -0.00153
+  }
+]

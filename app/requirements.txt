@@ -1,0 +1,26 @@
+# ── Core framework ────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── Data / ML ─────────────────────────────────────────────────────────────────
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+lightgbm>=4.3.0
+shap>=0.45.0
+
+# ── Calibration & probabilistic models ───────────────────────────────────────
+# betacal — Beta calibration used in Phase 4
+betacal>=0.1.0
+# venn-abers — Venn-ABERS calibration used in Phase 4
+venn-abers>=1.0.0
+
+# ── Bayesian optimisation (Phase 3 model search) ──────────────────────────────
+optuna>=3.6.0
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+plotly>=5.20.0
+matplotlib>=3.8.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+requests>=2.31.0

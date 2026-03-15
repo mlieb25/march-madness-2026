@@ -1,0 +1,23 @@
+{
+  "log_loss_raw": {
+    "barthag_lr": 0.51998,
+    "full_lr": 0.5112,
+    "small_lr": 0.5197
+  },
+  "brier_raw": {
+    "barthag_lr": 0.17638,
+    "full_lr": 0.17318,
+    "small_lr": 0.17642
+  },
+  "log_loss_platt": {
+    "barthag_lr": 0.56321,
+    "full_lr": 0.56323,
+    "small_lr": 0.56908
+  },
+  "log_loss_iso": {
+    "barthag_lr": 0.66974,
+    "full_lr": 0.59248,
+    "small_lr": 0.516
+  },
+  "description": "Mean log loss / Brier across all held-out test seasons. Phase 3+ models must beat full_lr log_loss_raw to earn a spot."
+}

@@ -1,0 +1,1954 @@
+team_a,team_b,xgb_prob_a_wins
+Duke,Michigan,0.476586
+Duke,Arizona,0.5508447
+Duke,Florida,0.45217073
+Duke,Houston,0.5869748
+Duke,Gonzaga,0.555045
+Duke,Iowa St.,0.5921806
+Duke,Illinois,0.5517944
+Duke,Purdue,0.44231653
+Duke,UConn,0.60836977
+Duke,Michigan St.,0.5070383
+Duke,Virginia,0.6155903
+Duke,Nebraska,0.58920044
+Duke,Vanderbilt,0.5991695
+Duke,Louisville,0.60034007
+Duke,Arkansas,0.5901031
+Duke,Alabama,0.558061
+Duke,Texas Tech,0.49739262
+Duke,Tennessee,0.61069924
+Duke,Kansas,0.5853218
+Duke,BYU,0.6343868
+Duke,North Carolina,0.643936
+Duke,Wisconsin,0.61116153
+Duke,Iowa,0.62998253
+Duke,Utah St.,0.6364971
+Duke,Kentucky,0.64294815
+Duke,Saint Louis,0.6316406
+Duke,Ohio St.,0.6259816
+Duke,UCLA,0.63476646
+Duke,Miami (FL),0.6401714
+Duke,Georgia,0.62784195
+Duke,Clemson,0.6499892
+Duke,Villanova,0.6411316
+Duke,SMU,0.55258584
+Duke,TCU,0.64358103
+Duke,Auburn,0.6121135
+Duke,Santa Clara,0.623332
+Duke,Indiana,0.5495987
+Duke,Texas,0.5473996
+Duke,Texas A&M,0.6316406
+Duke,VCU,0.64245147
+Duke,San Diego St.,0.5725242
+Duke,New Mexico,0.5725242
+Duke,Oklahoma,0.55253273
+Duke,Cincinnati,0.5138087
+Duke,Tulsa,0.5707968
+Duke,Baylor,0.55357313
+Duke,UCF,0.6346524
+Duke,Akron,0.57911104
+Duke,Seton Hall,0.5620343
+Duke,Virginia Tech,0.5620343
+Duke,Washington,0.57399106
+Duke,Missouri,0.6171565
+Duke,West Virginia,0.56285506
+Duke,Boise St.,0.5752385
+Duke,Stanford,0.5620343
+Duke,Florida St.,0.5525763
+Duke,Belmont,0.5728439
+Duke,Miami (OH),0.6617489
+Duke,Northwestern,0.58809257
+Duke,Yale,0.5881545
+Duke,Wake Forest,0.5729709
+Duke,California,0.5725242
+Michigan,Arizona,0.5774913
+Michigan,Florida,0.5836194
+Michigan,Houston,0.56484777
+Michigan,Gonzaga,0.58186924
+Michigan,Iowa St.,0.5659059
+Michigan,Illinois,0.54945797
+Michigan,Purdue,0.5755249
+Michigan,UConn,0.58470374
+Michigan,Michigan St.,0.6026323
+Michigan,Virginia,0.5815528
+Michigan,Nebraska,0.59858495
+Michigan,Vanderbilt,0.6060516
+Michigan,Louisville,0.6047307
+Michigan,Arkansas,0.6001418
+Michigan,Alabama,0.6074372
+Michigan,Texas Tech,0.5780313
+Michigan,Tennessee,0.6079562
+Michigan,Kansas,0.63219297
+Michigan,BYU,0.62705004
+Michigan,North Carolina,0.6346987
+Michigan,Wisconsin,0.6098246
+Michigan,Iowa,0.61202073
+Michigan,Utah St.,0.6346987
+Michigan,Kentucky,0.6383809
+Michigan,Saint Louis,0.6336848
+Michigan,Ohio St.,0.6202051
+Michigan,UCLA,0.6254702
+Michigan,Miami (FL),0.6346987
+Michigan,Georgia,0.62989485
+Michigan,Clemson,0.64317703
+Michigan,Villanova,0.6383809
+Michigan,SMU,0.5495987
+Michigan,TCU,0.6417979
+Michigan,Auburn,0.6078871
+Michigan,Santa Clara,0.6204672
+Michigan,Indiana,0.5476758
+Michigan,Texas,0.56116194
+Michigan,Texas A&M,0.6336848
+Michigan,VCU,0.6243853
+Michigan,San Diego St.,0.5725242
+Michigan,New Mexico,0.5765094
+Michigan,Oklahoma,0.5611828
+Michigan,Cincinnati,0.53101075
+Michigan,Tulsa,0.5649858
+Michigan,Baylor,0.55042404
+Michigan,UCF,0.6336848
+Michigan,Akron,0.5765094
+Michigan,Seton Hall,0.5706227
+Michigan,Virginia Tech,0.5706227
+Michigan,Washington,0.57106996
+Michigan,Missouri,0.6153202
+Michigan,West Virginia,0.56395483
+Michigan,Boise St.,0.5691418
+Michigan,Stanford,0.5706227
+Michigan,Florida St.,0.56679815
+Michigan,Belmont,0.5728439
+Michigan,Miami (OH),0.6554419
+Michigan,Northwestern,0.5851983
+Michigan,Yale,0.58383363
+Michigan,Wake Forest,0.56686616
+Michigan,California,0.57461256
+Arizona,Florida,0.42094606
+Arizona,Houston,0.5736565
+Arizona,Gonzaga,0.5908941
+Arizona,Iowa St.,0.57167923
+Arizona,Illinois,0.5204678
+Arizona,Purdue,0.4306229
+Arizona,UConn,0.5951215
+Arizona,Michigan St.,0.5006811
+Arizona,Virginia,0.60736024
+Arizona,Nebraska,0.6050922
+Arizona,Vanderbilt,0.6086524
+Arizona,Louisville,0.6101669
+Arizona,Arkansas,0.58686656
+Arizona,Alabama,0.5595453
+Arizona,Texas Tech,0.49554315
+Arizona,Tennessee,0.5944874
+Arizona,Kansas,0.553131
+Arizona,BYU,0.6343868
+Arizona,North Carolina,0.643936
+Arizona,Wisconsin,0.59935665
+Arizona,Iowa,0.6255584
+Arizona,Utah St.,0.62989485
+Arizona,Kentucky,0.64294815
+Arizona,Saint Louis,0.6336848
+Arizona,Ohio St.,0.6198315
+Arizona,UCLA,0.6322536
+Arizona,Miami (FL),0.6364971
+Arizona,Georgia,0.62705004
+Arizona,Clemson,0.64822066
+Arizona,Villanova,0.6393431
+Arizona,SMU,0.55258584
+Arizona,TCU,0.6499892
+Arizona,Auburn,0.6098606
+Arizona,Santa Clara,0.61612046
+Arizona,Indiana,0.5476758
+Arizona,Texas,0.55063313
+Arizona,Texas A&M,0.6336848
+Arizona,VCU,0.6336848
+Arizona,San Diego St.,0.5725242
+Arizona,New Mexico,0.5725242
+Arizona,Oklahoma,0.55232173
+Arizona,Cincinnati,0.51551616
+Arizona,Tulsa,0.5668933
+Arizona,Baylor,0.5586927
+Arizona,UCF,0.6364832
+Arizona,Akron,0.572319
+Arizona,Seton Hall,0.5601221
+Arizona,Virginia Tech,0.55781054
+Arizona,Washington,0.5720912
+Arizona,Missouri,0.6153202
+Arizona,West Virginia,0.5534187
+Arizona,Boise St.,0.5691418
+Arizona,Stanford,0.5601221
+Arizona,Florida St.,0.55627674
+Arizona,Belmont,0.5665897
+Arizona,Miami (OH),0.6514765
+Arizona,Northwestern,0.58621037
+Arizona,Yale,0.57962036
+Arizona,Wake Forest,0.5687716
+Arizona,California,0.5725242
+Florida,Houston,0.5624663
+Florida,Gonzaga,0.559151
+Florida,Iowa St.,0.5581976
+Florida,Illinois,0.5646452
+Florida,Purdue,0.44557264
+Florida,UConn,0.57145834
+Florida,Michigan St.,0.5871206
+Florida,Virginia,0.5720486
+Florida,Nebraska,0.59577554
+Florida,Vanderbilt,0.6033466
+Florida,Louisville,0.60655934
+Florida,Arkansas,0.60936797
+Florida,Alabama,0.46317783
+Florida,Texas Tech,0.5631283
+Florida,Tennessee,0.594754
+Florida,Kansas,0.5640237
+Florida,BYU,0.63194877
+Florida,North Carolina,0.64278305
+Florida,Wisconsin,0.614202
+Florida,Iowa,0.62405944
+Florida,Utah St.,0.63622975
+Florida,Kentucky,0.6475517
+Florida,Saint Louis,0.644791
+Florida,Ohio St.,0.6088175
+Florida,UCLA,0.62123203
+Florida,Miami (FL),0.64278305
+Florida,Georgia,0.6311589
+Florida,Clemson,0.6544374
+Florida,Villanova,0.6409982
+Florida,SMU,0.5758242
+Florida,TCU,0.65730065
+Florida,Auburn,0.61061203
+Florida,Santa Clara,0.62697524
+Florida,Indiana,0.5592656
+Florida,Texas,0.5718124
+Florida,Texas A&M,0.644791
+Florida,VCU,0.6403325
+Florida,San Diego St.,0.5777859
+Florida,New Mexico,0.58375716
+Florida,Oklahoma,0.56038797
+Florida,Cincinnati,0.5088877
+Florida,Tulsa,0.5668933
+Florida,Baylor,0.5666663
+Florida,UCF,0.644791
+Florida,Akron,0.59158283
+Florida,Seton Hall,0.5621191
+Florida,Virginia Tech,0.5543593
+Florida,Washington,0.5940944
+Florida,Missouri,0.63486075
+Florida,West Virginia,0.5497178
+Florida,Boise St.,0.574653
+Florida,Stanford,0.55863297
+Florida,Florida St.,0.55254215
+Florida,Belmont,0.5693134
+Florida,Miami (OH),0.65766615
+Florida,Northwestern,0.59951985
+Florida,Yale,0.58232254
+Florida,Wake Forest,0.58286214
+Florida,California,0.5752385
+Houston,Gonzaga,0.5707095
+Houston,Iowa St.,0.5754813
+Houston,Illinois,0.43341458
+Houston,Purdue,0.4488474
+Houston,UConn,0.5933469
+Houston,Michigan St.,0.46899825
+Houston,Virginia,0.59375703
+Houston,Nebraska,0.5959602
+Houston,Vanderbilt,0.5595834
+Houston,Louisville,0.59705514
+Houston,Arkansas,0.5647031
+Houston,Alabama,0.4898795
+Houston,Texas Tech,0.5054616
+Houston,Tennessee,0.5315553
+Houston,Kansas,0.5750021
+Houston,BYU,0.6255388
+Houston,North Carolina,0.63903904
+Houston,Wisconsin,0.5890208
+Houston,Iowa,0.6302169
+Houston,Utah St.,0.633396
+Houston,Kentucky,0.64380056
+Houston,Saint Louis,0.64277387
+Houston,Ohio St.,0.6081533
+Houston,UCLA,0.6259067
+Houston,Miami (FL),0.64277387
+Houston,Georgia,0.62491584
+Houston,Clemson,0.65619135
+Houston,Villanova,0.6475517
+Houston,SMU,0.57407546
+Houston,TCU,0.6553166
+Houston,Auburn,0.60343826
+Houston,Santa Clara,0.62491584
+Houston,Indiana,0.55770767
+Houston,Texas,0.55072594
+Houston,Texas A&M,0.64277387
+Houston,VCU,0.6346217
+Houston,San Diego St.,0.54913455
+Houston,New Mexico,0.56616455
+Houston,Oklahoma,0.5539528
+Houston,Cincinnati,0.48785317
+Houston,Tulsa,0.56473243
+Houston,Baylor,0.57210666
+Houston,UCF,0.6455416
+Houston,Akron,0.5659158
+Houston,Seton Hall,0.5396846
+Houston,Virginia Tech,0.55627674
+Houston,Washington,0.5867131
+Houston,Missouri,0.63665885
+Houston,West Virginia,0.55329496
+Houston,Boise St.,0.57572335
+Houston,Stanford,0.55627674
+Houston,Florida St.,0.5503665
+Houston,Belmont,0.56442845
+Houston,Miami (OH),0.65568304
+Houston,Northwestern,0.60138273
+Houston,Yale,0.5804479
+Houston,Wake Forest,0.5826988
+Houston,California,0.5703701
+Gonzaga,Iowa St.,0.42603156
+Gonzaga,Illinois,0.45089164
+Gonzaga,Purdue,0.4924736
+Gonzaga,UConn,0.4485233
+Gonzaga,Michigan St.,0.4817418
+Gonzaga,Virginia,0.45764935
+Gonzaga,Nebraska,0.45654088
+Gonzaga,Vanderbilt,0.44919515
+Gonzaga,Louisville,0.43213892
+Gonzaga,Arkansas,0.46802184
+Gonzaga,Alabama,0.5091934
+Gonzaga,Texas Tech,0.46704295
+Gonzaga,Tennessee,0.44732028
+Gonzaga,Kansas,0.47732928
+Gonzaga,BYU,0.54053426
+Gonzaga,North Carolina,0.5641742
+Gonzaga,Wisconsin,0.45019445
+Gonzaga,Iowa,0.49942273
+Gonzaga,Utah St.,0.5546039
+Gonzaga,Kentucky,0.56801724
+Gonzaga,Saint Louis,0.62697524
+Gonzaga,Ohio St.,0.4650222
+Gonzaga,UCLA,0.47996107
+Gonzaga,Miami (FL),0.61645687
+Gonzaga,Georgia,0.5856233
+Gonzaga,Clemson,0.56215626
+Gonzaga,Villanova,0.6050386
+Gonzaga,SMU,0.58945507
+Gonzaga,TCU,0.6383103
+Gonzaga,Auburn,0.56618565
+Gonzaga,Santa Clara,0.5861521
+Gonzaga,Indiana,0.5464253
+Gonzaga,Texas,0.5667546
+Gonzaga,Texas A&M,0.6234649
+Gonzaga,VCU,0.62697524
+Gonzaga,San Diego St.,0.523251
+Gonzaga,New Mexico,0.57749003
+Gonzaga,Oklahoma,0.57461524
+Gonzaga,Cincinnati,0.47967553
+Gonzaga,Tulsa,0.58714706
+Gonzaga,Baylor,0.57006663
+Gonzaga,UCF,0.6234649
+Gonzaga,Akron,0.60069376
+Gonzaga,Seton Hall,0.51766205
+Gonzaga,Virginia Tech,0.58337164
+Gonzaga,Washington,0.57690424
+Gonzaga,Missouri,0.6150336
+Gonzaga,West Virginia,0.5346486
+Gonzaga,Boise St.,0.5775944
+Gonzaga,Stanford,0.58337164
+Gonzaga,Florida St.,0.56588966
+Gonzaga,Belmont,0.59389764
+Gonzaga,Miami (OH),0.6375485
+Gonzaga,Northwestern,0.6030208
+Gonzaga,Yale,0.6017399
+Gonzaga,Wake Forest,0.5792162
+Gonzaga,California,0.581464
+Iowa St.,Illinois,0.43506563
+Iowa St.,Purdue,0.45649943
+Iowa St.,UConn,0.4564016
+Iowa St.,Michigan St.,0.4864106
+Iowa St.,Virginia,0.5900337
+Iowa St.,Nebraska,0.58439606
+Iowa St.,Vanderbilt,0.44405144
+Iowa St.,Louisville,0.5006144
+Iowa St.,Arkansas,0.51042414
+Iowa St.,Alabama,0.50685227
+Iowa St.,Texas Tech,0.4731899
+Iowa St.,Tennessee,0.4542151
+Iowa St.,Kansas,0.51663417
+Iowa St.,BYU,0.62244004
+Iowa St.,North Carolina,0.6280696
+Iowa St.,Wisconsin,0.47285795
+Iowa St.,Iowa,0.6171108
+Iowa St.,Utah St.,0.6249252
+Iowa St.,Kentucky,0.6299197
+Iowa St.,Saint Louis,0.644791
+Iowa St.,Ohio St.,0.55310166
+Iowa St.,UCLA,0.5713226
+Iowa St.,Miami (FL),0.6334053
+Iowa St.,Georgia,0.6319394
+Iowa St.,Clemson,0.64918405
+Iowa St.,Villanova,0.64019245
+Iowa St.,SMU,0.5914014
+Iowa St.,TCU,0.6571317
+Iowa St.,Auburn,0.60047346
+Iowa St.,Santa Clara,0.6312563
+Iowa St.,Indiana,0.59150946
+Iowa St.,Texas,0.58807
+Iowa St.,Texas A&M,0.6430778
+Iowa St.,VCU,0.644791
+Iowa St.,San Diego St.,0.5631161
+Iowa St.,New Mexico,0.5977525
+Iowa St.,Oklahoma,0.5925073
+Iowa St.,Cincinnati,0.50593495
+Iowa St.,Tulsa,0.5928783
+Iowa St.,Baylor,0.57292676
+Iowa St.,UCF,0.6380763
+Iowa St.,Akron,0.5978457
+Iowa St.,Seton Hall,0.56835115
+Iowa St.,Virginia Tech,0.581464
+Iowa St.,Washington,0.5914914
+Iowa St.,Missouri,0.6349286
+Iowa St.,West Virginia,0.5670434
+Iowa St.,Boise St.,0.57802427
+Iowa St.,Stanford,0.581464
+Iowa St.,Florida St.,0.5747848
+Iowa St.,Belmont,0.60194445
+Iowa St.,Miami (OH),0.6499182
+Iowa St.,Northwestern,0.6189898
+Iowa St.,Yale,0.5990992
+Iowa St.,Wake Forest,0.59141606
+Iowa St.,California,0.5907543
+Illinois,Purdue,0.45936644
+Illinois,UConn,0.5870926
+Illinois,Michigan St.,0.49126527
+Illinois,Virginia,0.58574814
+Illinois,Nebraska,0.5921846
+Illinois,Vanderbilt,0.58141786
+Illinois,Louisville,0.5989287
+Illinois,Arkansas,0.5826076
+Illinois,Alabama,0.5423931
+Illinois,Texas Tech,0.4534221
+Illinois,Tennessee,0.60521334
+Illinois,Kansas,0.5668423
+Illinois,BYU,0.6462084
+Illinois,North Carolina,0.6351994
+Illinois,Wisconsin,0.5840211
+Illinois,Iowa,0.62885195
+Illinois,Utah St.,0.6454301
+Illinois,Kentucky,0.6414527
+Illinois,Saint Louis,0.64896005
+Illinois,Ohio St.,0.6051966
+Illinois,UCLA,0.62649995
+Illinois,Miami (FL),0.64546067
+Illinois,Georgia,0.64441615
+Illinois,Clemson,0.62792397
+Illinois,Villanova,0.6473087
+Illinois,SMU,0.5864596
+Illinois,TCU,0.6379585
+Illinois,Auburn,0.62562823
+Illinois,Santa Clara,0.6464292
+Illinois,Indiana,0.5631161
+Illinois,Texas,0.5835281
+Illinois,Texas A&M,0.63925624
+Illinois,VCU,0.65730065
+Illinois,San Diego St.,0.5031413
+Illinois,New Mexico,0.5775328
+Illinois,Oklahoma,0.5823572
+Illinois,Cincinnati,0.5269401
+Illinois,Tulsa,0.60878867
+Illinois,Baylor,0.60298026
+Illinois,UCF,0.6562671
+Illinois,Akron,0.60404
+Illinois,Seton Hall,0.4907037
+Illinois,Virginia Tech,0.5907543
+Illinois,Washington,0.57656074
+Illinois,Missouri,0.65730065
+Illinois,West Virginia,0.53390545
+Illinois,Boise St.,0.61665803
+Illinois,Stanford,0.5907543
+Illinois,Florida St.,0.60775
+Illinois,Belmont,0.61341363
+Illinois,Miami (OH),0.6548167
+Illinois,Northwestern,0.63641715
+Illinois,Yale,0.6165546
+Illinois,Wake Forest,0.5995895
+Illinois,California,0.57806814
+Purdue,UConn,0.57724804
+Purdue,Michigan St.,0.58259183
+Purdue,Virginia,0.5632796
+Purdue,Nebraska,0.5670329
+Purdue,Vanderbilt,0.56945217
+Purdue,Louisville,0.5778332
+Purdue,Arkansas,0.58845955
+Purdue,Alabama,0.5001791
+Purdue,Texas Tech,0.5803862
+Purdue,Tennessee,0.5937873
+Purdue,Kansas,0.53111446
+Purdue,BYU,0.64618
+Purdue,North Carolina,0.6253525
+Purdue,Wisconsin,0.58871746
+Purdue,Iowa,0.61322397
+Purdue,Utah St.,0.63935906
+Purdue,Kentucky,0.6328656
+Purdue,Saint Louis,0.63129634
+Purdue,Ohio St.,0.5763925
+Purdue,UCLA,0.5837919
+Purdue,Miami (FL),0.6379585
+Purdue,Georgia,0.64642
+Purdue,Clemson,0.6226385
+Purdue,Villanova,0.64149475
+Purdue,SMU,0.58103555
+Purdue,TCU,0.620168
+Purdue,Auburn,0.62588185
+Purdue,Santa Clara,0.6272737
+Purdue,Indiana,0.49516937
+Purdue,Texas,0.58721036
+Purdue,Texas A&M,0.6269195
+Purdue,VCU,0.62816733
+Purdue,San Diego St.,0.5053669
+Purdue,New Mexico,0.50992745
+Purdue,Oklahoma,0.57301396
+Purdue,Cincinnati,0.4914307
+Purdue,Tulsa,0.5792171
+Purdue,Baylor,0.5878827
+Purdue,UCF,0.6553166
+Purdue,Akron,0.59734374
+Purdue,Seton Hall,0.5053669
+Purdue,Virginia Tech,0.50505215
+Purdue,Washington,0.5293093
+Purdue,Missouri,0.6235361
+Purdue,West Virginia,0.50147164
+Purdue,Boise St.,0.5374364
+Purdue,Stanford,0.5138087
+Purdue,Florida St.,0.55691886
+Purdue,Belmont,0.5931789
+Purdue,Miami (OH),0.6567931
+Purdue,Northwestern,0.54945815
+Purdue,Yale,0.59529984
+Purdue,Wake Forest,0.5941643
+Purdue,California,0.49832743
+UConn,Michigan St.,0.44573596
+UConn,Virginia,0.5734667
+UConn,Nebraska,0.5806969
+UConn,Vanderbilt,0.465869
+UConn,Louisville,0.57877946
+UConn,Arkansas,0.48079097
+UConn,Alabama,0.47337475
+UConn,Texas Tech,0.43800646
+UConn,Tennessee,0.42094606
+UConn,Kansas,0.49020594
+UConn,BYU,0.6236516
+UConn,North Carolina,0.60531825
+UConn,Wisconsin,0.47088122
+UConn,Iowa,0.6110038
+UConn,Utah St.,0.60804355
+UConn,Kentucky,0.6245015
+UConn,Saint Louis,0.6362205
+UConn,Ohio St.,0.4929007
+UConn,UCLA,0.59221894
+UConn,Miami (FL),0.6311589
+UConn,Georgia,0.6292064
+UConn,Clemson,0.6039022
+UConn,Villanova,0.6430778
+UConn,SMU,0.5775875
+UConn,TCU,0.64842784
+UConn,Auburn,0.6039749
+UConn,Santa Clara,0.6066986
+UConn,Indiana,0.5581565
+UConn,Texas,0.5668104
+UConn,Texas A&M,0.6362205
+UConn,VCU,0.62800527
+UConn,San Diego St.,0.48634252
+UConn,New Mexico,0.55798495
+UConn,Oklahoma,0.5626764
+UConn,Cincinnati,0.49174365
+UConn,Tulsa,0.57455385
+UConn,Baylor,0.5707792
+UConn,UCF,0.64105636
+UConn,Akron,0.5735105
+UConn,Seton Hall,0.47718924
+UConn,Virginia Tech,0.55234474
+UConn,Washington,0.58466715
+UConn,Missouri,0.6300579
+UConn,West Virginia,0.4951617
+UConn,Boise St.,0.57183105
+UConn,Stanford,0.5553284
+UConn,Florida St.,0.5532996
+UConn,Belmont,0.56491923
+UConn,Miami (OH),0.64207244
+UConn,Northwestern,0.5901317
+UConn,Yale,0.5693134
+UConn,Wake Forest,0.58192796
+UConn,California,0.57104486
+Michigan St.,Virginia,0.56512666
+Michigan St.,Nebraska,0.5772084
+Michigan St.,Vanderbilt,0.5602493
+Michigan St.,Louisville,0.57991767
+Michigan St.,Arkansas,0.56835407
+Michigan St.,Alabama,0.47504565
+Michigan St.,Texas Tech,0.42319688
+Michigan St.,Tennessee,0.5889073
+Michigan St.,Kansas,0.45163825
+Michigan St.,BYU,0.6026317
+Michigan St.,North Carolina,0.59724456
+Michigan St.,Wisconsin,0.5620911
+Michigan St.,Iowa,0.5899673
+Michigan St.,Utah St.,0.58548445
+Michigan St.,Kentucky,0.6159196
+Michigan St.,Saint Louis,0.6362205
+Michigan St.,Ohio St.,0.6086524
+Michigan St.,UCLA,0.61130023
+Michigan St.,Miami (FL),0.60313034
+Michigan St.,Georgia,0.6292064
+Michigan St.,Clemson,0.6062795
+Michigan St.,Villanova,0.6323314
+Michigan St.,SMU,0.58393866
+Michigan St.,TCU,0.6440236
+Michigan St.,Auburn,0.6111579
+Michigan St.,Santa Clara,0.5739002
+Michigan St.,Indiana,0.5765153
+Michigan St.,Texas,0.58522505
+Michigan St.,Texas A&M,0.6362205
+Michigan St.,VCU,0.6382538
+Michigan St.,San Diego St.,0.5168393
+Michigan St.,New Mexico,0.59391975
+Michigan St.,Oklahoma,0.5813978
+Michigan St.,Cincinnati,0.5186941
+Michigan St.,Tulsa,0.597534
+Michigan St.,Baylor,0.5639619
+Michigan St.,UCF,0.6354361
+Michigan St.,Akron,0.59572905
+Michigan St.,Seton Hall,0.50440687
+Michigan St.,Virginia Tech,0.57563853
+Michigan St.,Washington,0.5874031
+Michigan St.,Missouri,0.6300579
+Michigan St.,West Virginia,0.5127217
+Michigan St.,Boise St.,0.57884955
+Michigan St.,Stanford,0.57563853
+Michigan St.,Florida St.,0.5674979
+Michigan St.,Belmont,0.59959906
+Michigan St.,Miami (OH),0.6440913
+Michigan St.,Northwestern,0.62173915
+Michigan St.,Yale,0.5990992
+Michigan St.,Wake Forest,0.5844736
+Michigan St.,California,0.600795
+Virginia,Nebraska,0.4525668
+Virginia,Vanderbilt,0.44943303
+Virginia,Louisville,0.46580595
+Virginia,Arkansas,0.48268968
+Virginia,Alabama,0.48974186
+Virginia,Texas Tech,0.42292
+Virginia,Tennessee,0.42844445
+Virginia,Kansas,0.45009208
+Virginia,BYU,0.5722997
+Virginia,North Carolina,0.5633822
+Virginia,Wisconsin,0.4651937
+Virginia,Iowa,0.49135768
+Virginia,Utah St.,0.5948515
+Virginia,Kentucky,0.5727092
+Virginia,Saint Louis,0.633396
+Virginia,Ohio St.,0.46727616
+Virginia,UCLA,0.50316745
+Virginia,Miami (FL),0.60705096
+Virginia,Georgia,0.6361965
+Virginia,Clemson,0.538922
+Virginia,Villanova,0.6215658
+Virginia,SMU,0.58945507
+Virginia,TCU,0.6467869
+Virginia,Auburn,0.6048669
+Virginia,Santa Clara,0.5965414
+Virginia,Indiana,0.54492635
+Virginia,Texas,0.58869994
+Virginia,Texas A&M,0.64035225
+Virginia,VCU,0.6382538
+Virginia,San Diego St.,0.5057379
+Virginia,New Mexico,0.57366383
+Virginia,Oklahoma,0.59202975
+Virginia,Cincinnati,0.501502
+Virginia,Tulsa,0.5873294
+Virginia,Baylor,0.57489675
+Virginia,UCF,0.63195854
+Virginia,Akron,0.59193105
+Virginia,Seton Hall,0.50585145
+Virginia,Virginia Tech,0.57858545
+Virginia,Washington,0.58373225
+Virginia,Missouri,0.6342194
+Virginia,West Virginia,0.51248735
+Virginia,Boise St.,0.5728519
+Virginia,Stanford,0.5873747
+Virginia,Florida St.,0.56074244
+Virginia,Belmont,0.597534
+Virginia,Miami (OH),0.64207244
+Virginia,Northwestern,0.61365944
+Virginia,Yale,0.5952365
+Virginia,Wake Forest,0.5901317
+Virginia,California,0.5837352
+Nebraska,Vanderbilt,0.42639834
+Nebraska,Louisville,0.4370895
+Nebraska,Arkansas,0.47477707
+Nebraska,Alabama,0.46925843
+Nebraska,Texas Tech,0.43250346
+Nebraska,Tennessee,0.42276824
+Nebraska,Kansas,0.46173695
+Nebraska,BYU,0.5319664
+Nebraska,North Carolina,0.46587294
+Nebraska,Wisconsin,0.42994186
+Nebraska,Iowa,0.5714795
+Nebraska,Utah St.,0.5835667
+Nebraska,Kentucky,0.5547733
+Nebraska,Saint Louis,0.6312563
+Nebraska,Ohio St.,0.43239257
+Nebraska,UCLA,0.44406068
+Nebraska,Miami (FL),0.5669477
+Nebraska,Georgia,0.5701449
+Nebraska,Clemson,0.59585553
+Nebraska,Villanova,0.5522613
+Nebraska,SMU,0.5807852
+Nebraska,TCU,0.64237547
+Nebraska,Auburn,0.57386446
+Nebraska,Santa Clara,0.5612156
+Nebraska,Indiana,0.5398811
+Nebraska,Texas,0.5732044
+Nebraska,Texas A&M,0.61639535
+Nebraska,VCU,0.6312563
+Nebraska,San Diego St.,0.53300613
+Nebraska,New Mexico,0.59501785
+Nebraska,Oklahoma,0.5518665
+Nebraska,Cincinnati,0.5290197
+Nebraska,Tulsa,0.57662565
+Nebraska,Baylor,0.56144464
+Nebraska,UCF,0.63390934
+Nebraska,Akron,0.5989403
+Nebraska,Seton Hall,0.5314604
+Nebraska,Virginia Tech,0.58407605
+Nebraska,Washington,0.5703328
+Nebraska,Missouri,0.63003373
+Nebraska,West Virginia,0.54392767
+Nebraska,Boise St.,0.5684684
+Nebraska,Stanford,0.58407605
+Nebraska,Florida St.,0.5752682
+Nebraska,Belmont,0.6022269
+Nebraska,Miami (OH),0.6262608
+Nebraska,Northwestern,0.60003
+Nebraska,Yale,0.6045873
+Nebraska,Wake Forest,0.5780852
+Nebraska,California,0.5814117
+Vanderbilt,Louisville,0.58743143
+Vanderbilt,Arkansas,0.45579496
+Vanderbilt,Alabama,0.49283993
+Vanderbilt,Texas Tech,0.42708677
+Vanderbilt,Tennessee,0.5281433
+Vanderbilt,Kansas,0.49235612
+Vanderbilt,BYU,0.6268278
+Vanderbilt,North Carolina,0.6061684
+Vanderbilt,Wisconsin,0.54496765
+Vanderbilt,Iowa,0.58505815
+Vanderbilt,Utah St.,0.6095537
+Vanderbilt,Kentucky,0.5901904
+Vanderbilt,Saint Louis,0.6213993
+Vanderbilt,Ohio St.,0.5716295
+Vanderbilt,UCLA,0.6000764
+Vanderbilt,Miami (FL),0.62820214
+Vanderbilt,Georgia,0.6382538
+Vanderbilt,Clemson,0.6096211
+Vanderbilt,Villanova,0.6224632
+Vanderbilt,SMU,0.5825944
+Vanderbilt,TCU,0.6304844
+Vanderbilt,Auburn,0.6107371
+Vanderbilt,Santa Clara,0.5946966
+Vanderbilt,Indiana,0.53691244
+Vanderbilt,Texas,0.5825421
+Vanderbilt,Texas A&M,0.6250756
+Vanderbilt,VCU,0.64842784
+Vanderbilt,San Diego St.,0.4969537
+Vanderbilt,New Mexico,0.5427939
+Vanderbilt,Oklahoma,0.5800167
+Vanderbilt,Cincinnati,0.51650244
+Vanderbilt,Tulsa,0.5938364
+Vanderbilt,Baylor,0.5809666
+Vanderbilt,UCF,0.65117556
+Vanderbilt,Akron,0.60614187
+Vanderbilt,Seton Hall,0.50123817
+Vanderbilt,Virginia Tech,0.5678662
+Vanderbilt,Washington,0.54830676
+Vanderbilt,Missouri,0.6398425
+Vanderbilt,West Virginia,0.5052709
+Vanderbilt,Boise St.,0.58600014
+Vanderbilt,Stanford,0.5878943
+Vanderbilt,Florida St.,0.5564738
+Vanderbilt,Belmont,0.600552
+Vanderbilt,Miami (OH),0.6587732
+Vanderbilt,Northwestern,0.6346185
+Vanderbilt,Yale,0.60749096
+Vanderbilt,Wake Forest,0.6005904
+Vanderbilt,California,0.5455907
+Louisville,Arkansas,0.44552866
+Louisville,Alabama,0.48918238
+Louisville,Texas Tech,0.43319562
+Louisville,Tennessee,0.42857292
+Louisville,Kansas,0.47309455
+Louisville,BYU,0.54344124
+Louisville,North Carolina,0.60468704
+Louisville,Wisconsin,0.45286956
+Louisville,Iowa,0.58433074
+Louisville,Utah St.,0.5929316
+Louisville,Kentucky,0.54587007
+Louisville,Saint Louis,0.64177936
+Louisville,Ohio St.,0.46970236
+Louisville,UCLA,0.5561686
+Louisville,Miami (FL),0.60658795
+Louisville,Georgia,0.60705096
+Louisville,Clemson,0.596179
+Louisville,Villanova,0.6115267
+Louisville,SMU,0.5963935
+Louisville,TCU,0.6366567
+Louisville,Auburn,0.596091
+Louisville,Santa Clara,0.59883034
+Louisville,Indiana,0.5657277
+Louisville,Texas,0.5806839
+Louisville,Texas A&M,0.6300642
+Louisville,VCU,0.64278305
+Louisville,San Diego St.,0.5046812
+Louisville,New Mexico,0.5770566
+Louisville,Oklahoma,0.5913606
+Louisville,Cincinnati,0.57537293
+Louisville,Tulsa,0.60991806
+Louisville,Baylor,0.61917
+Louisville,UCF,0.64106554
+Louisville,Akron,0.60158676
+Louisville,Seton Hall,0.5053979
+Louisville,Virginia Tech,0.587528
+Louisville,Washington,0.63900703
+Louisville,Missouri,0.6374522
+Louisville,West Virginia,0.5923557
+Louisville,Boise St.,0.6283488
+Louisville,Stanford,0.5913796
+Louisville,Florida St.,0.6168193
+Louisville,Belmont,0.5982996
+Louisville,Miami (OH),0.64792335
+Louisville,Northwestern,0.63770545
+Louisville,Yale,0.59910506
+Louisville,Wake Forest,0.6445981
+Louisville,California,0.5821619
+Arkansas,Alabama,0.4306932
+Arkansas,Texas Tech,0.43528673
+Arkansas,Tennessee,0.5293908
+Arkansas,Kansas,0.4700593
+Arkansas,BYU,0.5695828
+Arkansas,North Carolina,0.5677631
+Arkansas,Wisconsin,0.5782369
+Arkansas,Iowa,0.55888796
+Arkansas,Utah St.,0.5785246
+Arkansas,Kentucky,0.59811115
+Arkansas,Saint Louis,0.6212178
+Arkansas,Ohio St.,0.56350505
+Arkansas,UCLA,0.5843874
+Arkansas,Miami (FL),0.58312476
+Arkansas,Georgia,0.6145078
+Arkansas,Clemson,0.5865249
+Arkansas,Villanova,0.59121734
+Arkansas,SMU,0.5386364
+Arkansas,TCU,0.625443
+Arkansas,Auburn,0.6126764
+Arkansas,Santa Clara,0.56246525
+Arkansas,Indiana,0.52711964
+Arkansas,Texas,0.58065265
+Arkansas,Texas A&M,0.59874105
+Arkansas,VCU,0.62131864
+Arkansas,San Diego St.,0.5119895
+Arkansas,New Mexico,0.5191066
+Arkansas,Oklahoma,0.55689186
+Arkansas,Cincinnati,0.54334915
+Arkansas,Tulsa,0.6024652
+Arkansas,Baylor,0.5895055
+Arkansas,UCF,0.6468962
+Arkansas,Akron,0.557746
+Arkansas,Seton Hall,0.49728292
+Arkansas,Virginia Tech,0.5054041
+Arkansas,Washington,0.5430371
+Arkansas,Missouri,0.6067858
+Arkansas,West Virginia,0.51387644
+Arkansas,Boise St.,0.5342388
+Arkansas,Stanford,0.5061601
+Arkansas,Florida St.,0.53378403
+Arkansas,Belmont,0.60432345
+Arkansas,Miami (OH),0.6568022
+Arkansas,Northwestern,0.60836613
+Arkansas,Yale,0.60749096
+Arkansas,Wake Forest,0.5797234
+Arkansas,California,0.5239307
+Alabama,Texas Tech,0.53100616
+Alabama,Tennessee,0.5378923
+Alabama,Kansas,0.5409142
+Alabama,BYU,0.58261365
+Alabama,North Carolina,0.5601055
+Alabama,Wisconsin,0.5528609
+Alabama,Iowa,0.5602417
+Alabama,Utah St.,0.57049036
+Alabama,Kentucky,0.60575056
+Alabama,Saint Louis,0.6271118
+Alabama,Ohio St.,0.5635176
+Alabama,UCLA,0.5694561
+Alabama,Miami (FL),0.55967695
+Alabama,Georgia,0.6132734
+Alabama,Clemson,0.58504754
+Alabama,Villanova,0.60404277
+Alabama,SMU,0.51425815
+Alabama,TCU,0.62814015
+Alabama,Auburn,0.6061889
+Alabama,Santa Clara,0.5572573
+Alabama,Indiana,0.51588786
+Alabama,Texas,0.55333215
+Alabama,Texas A&M,0.6120369
+Alabama,VCU,0.63090247
+Alabama,San Diego St.,0.5119895
+Alabama,New Mexico,0.51670307
+Alabama,Oklahoma,0.54166114
+Alabama,Cincinnati,0.53900445
+Alabama,Tulsa,0.6024652
+Alabama,Baylor,0.5782748
+Alabama,UCF,0.6360831
+Alabama,Akron,0.55719215
+Alabama,Seton Hall,0.50643635
+Alabama,Virginia Tech,0.5239307
+Alabama,Washington,0.52874386
+Alabama,Missouri,0.63043094
+Alabama,West Virginia,0.5232283
+Alabama,Boise St.,0.5489331
+Alabama,Stanford,0.5201024
+Alabama,Florida St.,0.53337145
+Alabama,Belmont,0.602841
+Alabama,Miami (OH),0.6550498
+Alabama,Northwestern,0.5950734
+Alabama,Yale,0.60244316
+Alabama,Wake Forest,0.54727364
+Alabama,California,0.5172511
+Texas Tech,Tennessee,0.58635664
+Texas Tech,Kansas,0.46399304
+Texas Tech,BYU,0.61104167
+Texas Tech,North Carolina,0.5909155
+Texas Tech,Wisconsin,0.57960194
+Texas Tech,Iowa,0.581993
+Texas Tech,Utah St.,0.56522655
+Texas Tech,Kentucky,0.6075815
+Texas Tech,Saint Louis,0.6364508
+Texas Tech,Ohio St.,0.5987445
+Texas Tech,UCLA,0.5911837
+Texas Tech,Miami (FL),0.5908038
+Texas Tech,Georgia,0.62706345
+Texas Tech,Clemson,0.60899895
+Texas Tech,Villanova,0.6256521
+Texas Tech,SMU,0.5845894
+Texas Tech,TCU,0.6379585
+Texas Tech,Auburn,0.61770064
+Texas Tech,Santa Clara,0.5664122
+Texas Tech,Indiana,0.53497374
+Texas Tech,Texas,0.58929473
+Texas Tech,Texas A&M,0.63903016
+Texas Tech,VCU,0.6464292
+Texas Tech,San Diego St.,0.51147854
+Texas Tech,New Mexico,0.5581253
+Texas Tech,Oklahoma,0.5855107
+Texas Tech,Cincinnati,0.5385528
+Texas Tech,Tulsa,0.600703
+Texas Tech,Baylor,0.60918784
+Texas Tech,UCF,0.64278305
+Texas Tech,Akron,0.6040589
+Texas Tech,Seton Hall,0.49593022
+Texas Tech,Virginia Tech,0.57444763
+Texas Tech,Washington,0.62143064
+Texas Tech,Missouri,0.64278305
+Texas Tech,West Virginia,0.5541822
+Texas Tech,Boise St.,0.62219507
+Texas Tech,Stanford,0.59672266
+Texas Tech,Florida St.,0.60847986
+Texas Tech,Belmont,0.6025307
+Texas Tech,Miami (OH),0.6556921
+Texas Tech,Northwestern,0.6553278
+Texas Tech,Yale,0.60896724
+Texas Tech,Wake Forest,0.6301998
+Texas Tech,California,0.55410093
+Tennessee,Kansas,0.4595592
+Tennessee,BYU,0.5276102
+Tennessee,North Carolina,0.59327585
+Tennessee,Wisconsin,0.52608025
+Tennessee,Iowa,0.6013797
+Tennessee,Utah St.,0.579456
+Tennessee,Kentucky,0.5835553
+Tennessee,Saint Louis,0.62706345
+Tennessee,Ohio St.,0.5624886
+Tennessee,UCLA,0.5981116
+Tennessee,Miami (FL),0.5956269
+Tennessee,Georgia,0.6172961
+Tennessee,Clemson,0.5914977
+Tennessee,Villanova,0.6311648
+Tennessee,SMU,0.5924272
+Tennessee,TCU,0.64278305
+Tennessee,Auburn,0.60907507
+Tennessee,Santa Clara,0.5329136
+Tennessee,Indiana,0.5796175
+Tennessee,Texas,0.5851446
+Tennessee,Texas A&M,0.62706345
+Tennessee,VCU,0.6334053
+Tennessee,San Diego St.,0.511828
+Tennessee,New Mexico,0.59439534
+Tennessee,Oklahoma,0.5781892
+Tennessee,Cincinnati,0.5797794
+Tennessee,Tulsa,0.60383576
+Tennessee,Baylor,0.62348676
+Tennessee,UCF,0.63194877
+Tennessee,Akron,0.5956492
+Tennessee,Seton Hall,0.51454586
+Tennessee,Virginia Tech,0.5824407
+Tennessee,Washington,0.6445981
+Tennessee,Missouri,0.6291182
+Tennessee,West Virginia,0.5742596
+Tennessee,Boise St.,0.6235111
+Tennessee,Stanford,0.5845987
+Tennessee,Florida St.,0.6061947
+Tennessee,Belmont,0.60362107
+Tennessee,Miami (OH),0.6400576
+Tennessee,Northwestern,0.6445981
+Tennessee,Yale,0.6057315
+Tennessee,Wake Forest,0.6401075
+Tennessee,California,0.6024379
+Kansas,BYU,0.55911434
+Kansas,North Carolina,0.5647581
+Kansas,Wisconsin,0.5434585
+Kansas,Iowa,0.55996025
+Kansas,Utah St.,0.5571753
+Kansas,Kentucky,0.60481167
+Kansas,Saint Louis,0.6292158
+Kansas,Ohio St.,0.5729325
+Kansas,UCLA,0.5594731
+Kansas,Miami (FL),0.5546157
+Kansas,Georgia,0.55219656
+Kansas,Clemson,0.57062083
+Kansas,Villanova,0.596546
+Kansas,SMU,0.57290554
+Kansas,TCU,0.63622975
+Kansas,Auburn,0.5798697
+Kansas,Santa Clara,0.5488653
+Kansas,Indiana,0.5594784
+Kansas,Texas,0.5872361
+Kansas,Texas A&M,0.60670817
+Kansas,VCU,0.6312563
+Kansas,San Diego St.,0.51158434
+Kansas,New Mexico,0.5989403
+Kansas,Oklahoma,0.5613537
+Kansas,Cincinnati,0.5423712
+Kansas,Tulsa,0.6053164
+Kansas,Baylor,0.5795057
+Kansas,UCF,0.6292158
+Kansas,Akron,0.5989403
+Kansas,Seton Hall,0.5237176
+Kansas,Virginia Tech,0.59768975
+Kansas,Washington,0.6005853
+Kansas,Missouri,0.6312563
+Kansas,West Virginia,0.56080693
+Kansas,Boise St.,0.58888006
+Kansas,Stanford,0.59768975
+Kansas,Florida St.,0.5985307
+Kansas,Belmont,0.60599285
+Kansas,Miami (OH),0.62420917
+Kansas,Northwestern,0.6005853
+Kansas,Yale,0.6083454
+Kansas,Wake Forest,0.56784403
+Kansas,California,0.5983793
+BYU,North Carolina,0.5429673
+BYU,Wisconsin,0.43088412
+BYU,Iowa,0.5049889
+BYU,Utah St.,0.5396506
+BYU,Kentucky,0.5653094
+BYU,Saint Louis,0.54798573
+BYU,Ohio St.,0.5056366
+BYU,UCLA,0.50365263
+BYU,Miami (FL),0.5644084
+BYU,Georgia,0.5751111
+BYU,Clemson,0.5327046
+BYU,Villanova,0.56492764
+BYU,SMU,0.57219034
+BYU,TCU,0.59319484
+BYU,Auburn,0.438654
+BYU,Santa Clara,0.5131113
+BYU,Indiana,0.5398246
+BYU,Texas,0.54607946
+BYU,Texas A&M,0.587319
+BYU,VCU,0.5841759
+BYU,San Diego St.,0.5385847
+BYU,New Mexico,0.5104471
+BYU,Oklahoma,0.5471732
+BYU,Cincinnati,0.54513776
+BYU,Tulsa,0.57786274
+BYU,Baylor,0.57056016
+BYU,UCF,0.6252799
+BYU,Akron,0.51447195
+BYU,Seton Hall,0.49937108
+BYU,Virginia Tech,0.5010036
+BYU,Washington,0.6114974
+BYU,Missouri,0.578123
+BYU,West Virginia,0.53323
+BYU,Boise St.,0.56935436
+BYU,Stanford,0.5010036
+BYU,Florida St.,0.5385729
+BYU,Belmont,0.6025307
+BYU,Miami (OH),0.6364508
+BYU,Northwestern,0.618789
+BYU,Yale,0.6006697
+BYU,Wake Forest,0.6110226
+BYU,California,0.5123303
+North Carolina,Wisconsin,0.41335556
+North Carolina,Iowa,0.55237144
+North Carolina,Utah St.,0.5772115
+North Carolina,Kentucky,0.4335724
+North Carolina,Saint Louis,0.56881875
+North Carolina,Ohio St.,0.42085943
+North Carolina,UCLA,0.4265968
+North Carolina,Miami (FL),0.5745173
+North Carolina,Georgia,0.59822124
+North Carolina,Clemson,0.57285804
+North Carolina,Villanova,0.5396884
+North Carolina,SMU,0.54743326
+North Carolina,TCU,0.62887794
+North Carolina,Auburn,0.54664874
+North Carolina,Santa Clara,0.5638681
+North Carolina,Indiana,0.55093586
+North Carolina,Texas,0.5792792
+North Carolina,Texas A&M,0.5886911
+North Carolina,VCU,0.6270033
+North Carolina,San Diego St.,0.51283795
+North Carolina,New Mexico,0.5250499
+North Carolina,Oklahoma,0.5531972
+North Carolina,Cincinnati,0.564619
+North Carolina,Tulsa,0.6038121
+North Carolina,Baylor,0.58514875
+North Carolina,UCF,0.6288377
+North Carolina,Akron,0.59986943
+North Carolina,Seton Hall,0.51006144
+North Carolina,Virginia Tech,0.5341007
+North Carolina,Washington,0.60630655
+North Carolina,Missouri,0.6154718
+North Carolina,West Virginia,0.55863947
+North Carolina,Boise St.,0.5866093
+North Carolina,Stanford,0.56037486
+North Carolina,Florida St.,0.5839163
+North Carolina,Belmont,0.60362107
+North Carolina,Miami (OH),0.64278305
+North Carolina,Northwestern,0.63446265
+North Carolina,Yale,0.6038756
+North Carolina,Wake Forest,0.6284172
+North Carolina,California,0.5126295
+Wisconsin,Iowa,0.5724614
+Wisconsin,Utah St.,0.58345735
+Wisconsin,Kentucky,0.5851195
+Wisconsin,Saint Louis,0.63234323
+Wisconsin,Ohio St.,0.57552487
+Wisconsin,UCLA,0.5842046
+Wisconsin,Miami (FL),0.59471595
+Wisconsin,Georgia,0.6100447
+Wisconsin,Clemson,0.58732086
+Wisconsin,Villanova,0.5898221
+Wisconsin,SMU,0.53958416
+Wisconsin,TCU,0.62792397
+Wisconsin,Auburn,0.6154267
+Wisconsin,Santa Clara,0.5713429
+Wisconsin,Indiana,0.5286266
+Wisconsin,Texas,0.5845894
+Wisconsin,Texas A&M,0.6160356
+Wisconsin,VCU,0.6331146
+Wisconsin,San Diego St.,0.49197555
+Wisconsin,New Mexico,0.51636493
+Wisconsin,Oklahoma,0.56117576
+Wisconsin,Cincinnati,0.53892547
+Wisconsin,Tulsa,0.600703
+Wisconsin,Baylor,0.6141651
+Wisconsin,UCF,0.64818853
+Wisconsin,Akron,0.58355427
+Wisconsin,Seton Hall,0.4962595
+Wisconsin,Virginia Tech,0.49370512
+Wisconsin,Washington,0.62135404
+Wisconsin,Missouri,0.6227118
+Wisconsin,West Virginia,0.54334193
+Wisconsin,Boise St.,0.5669592
+Wisconsin,Stanford,0.5265232
+Wisconsin,Florida St.,0.55205303
+Wisconsin,Belmont,0.60633606
+Wisconsin,Miami (OH),0.6568022
+Wisconsin,Northwestern,0.6263063
+Wisconsin,Yale,0.6071167
+Wisconsin,Wake Forest,0.6382918
+Wisconsin,California,0.51863235
+Iowa,Utah St.,0.58240515
+Iowa,Kentucky,0.4861845
+Iowa,Saint Louis,0.5645069
+Iowa,Ohio St.,0.44597492
+Iowa,UCLA,0.43238527
+Iowa,Miami (FL),0.5768254
+Iowa,Georgia,0.5947595
+Iowa,Clemson,0.58105534
+Iowa,Villanova,0.4767389
+Iowa,SMU,0.54596424
+Iowa,TCU,0.62699276
+Iowa,Auburn,0.54981667
+Iowa,Santa Clara,0.5579394
+Iowa,Indiana,0.48424327
+Iowa,Texas,0.584302
+Iowa,Texas A&M,0.5828901
+Iowa,VCU,0.6288003
+Iowa,San Diego St.,0.530451
+Iowa,New Mexico,0.53875923
+Iowa,Oklahoma,0.5131168
+Iowa,Cincinnati,0.5833343
+Iowa,Tulsa,0.6145088
+Iowa,Baylor,0.6253244
+Iowa,UCF,0.6199109
+Iowa,Akron,0.59831977
+Iowa,Seton Hall,0.5159418
+Iowa,Virginia Tech,0.57877845
+Iowa,Washington,0.6187904
+Iowa,Missouri,0.6171762
+Iowa,West Virginia,0.63532424
+Iowa,Boise St.,0.6288003
+Iowa,Stanford,0.5923538
+Iowa,Florida St.,0.636285
+Iowa,Belmont,0.6088723
+Iowa,Miami (OH),0.6397261
+Iowa,Northwestern,0.62010354
+Iowa,Yale,0.61513364
+Iowa,Wake Forest,0.63792634
+Iowa,California,0.5674209
+Utah St.,Kentucky,0.46559685
+Utah St.,Saint Louis,0.56138057
+Utah St.,Ohio St.,0.4358038
+Utah St.,UCLA,0.43431723
+Utah St.,Miami (FL),0.51648414
+Utah St.,Georgia,0.506867
+Utah St.,Clemson,0.45683834
+Utah St.,Villanova,0.45654088
+Utah St.,SMU,0.47286874
+Utah St.,TCU,0.5724897
+Utah St.,Auburn,0.4771874
+Utah St.,Santa Clara,0.5768389
+Utah St.,Indiana,0.43448874
+Utah St.,Texas,0.5280577
+Utah St.,Texas A&M,0.4913287
+Utah St.,VCU,0.6100786
+Utah St.,San Diego St.,0.5134405
+Utah St.,New Mexico,0.5156909
+Utah St.,Oklahoma,0.45909613
+Utah St.,Cincinnati,0.44484705
+Utah St.,Tulsa,0.60773575
+Utah St.,Baylor,0.55212325
+Utah St.,UCF,0.6215331
+Utah St.,Akron,0.5626949
+Utah St.,Seton Hall,0.5084563
+Utah St.,Virginia Tech,0.501278
+Utah St.,Washington,0.60237867
+Utah St.,Missouri,0.5391679
+Utah St.,West Virginia,0.59852
+Utah St.,Boise St.,0.6078243
+Utah St.,Stanford,0.513734
+Utah St.,Florida St.,0.54332924
+Utah St.,Belmont,0.60329413
+Utah St.,Miami (OH),0.64278305
+Utah St.,Northwestern,0.6125797
+Utah St.,Yale,0.6006234
+Utah St.,Wake Forest,0.6181169
+Utah St.,California,0.5182422
+Kentucky,Saint Louis,0.5586178
+Kentucky,Ohio St.,0.5124174
+Kentucky,UCLA,0.5264492
+Kentucky,Miami (FL),0.56723696
+Kentucky,Georgia,0.5579767
+Kentucky,Clemson,0.54398793
+Kentucky,Villanova,0.564505
+Kentucky,SMU,0.5845723
+Kentucky,TCU,0.61762327
+Kentucky,Auburn,0.45666316
+Kentucky,Santa Clara,0.5276746
+Kentucky,Indiana,0.55853605
+Kentucky,Texas,0.5618259
+Kentucky,Texas A&M,0.579405
+Kentucky,VCU,0.573535
+Kentucky,San Diego St.,0.5379919
+Kentucky,New Mexico,0.54293215
+Kentucky,Oklahoma,0.56804144
+Kentucky,Cincinnati,0.56354433
+Kentucky,Tulsa,0.6066783
+Kentucky,Baylor,0.5678888
+Kentucky,UCF,0.63194877
+Kentucky,Akron,0.6006346
+Kentucky,Seton Hall,0.50546116
+Kentucky,Virginia Tech,0.5649282
+Kentucky,Washington,0.6202852
+Kentucky,Missouri,0.58781296
+Kentucky,West Virginia,0.61287975
+Kentucky,Boise St.,0.62961656
+Kentucky,Stanford,0.5729907
+Kentucky,Florida St.,0.5921189
+Kentucky,Belmont,0.60171556
+Kentucky,Miami (OH),0.63518935
+Kentucky,Northwestern,0.63961744
+Kentucky,Yale,0.5998532
+Kentucky,Wake Forest,0.635467
+Kentucky,California,0.5467286
+Saint Louis,Ohio St.,0.4152097
+Saint Louis,UCLA,0.4201578
+Saint Louis,Miami (FL),0.4678979
+Saint Louis,Georgia,0.4736642
+Saint Louis,Clemson,0.44915792
+Saint Louis,Villanova,0.47045532
+Saint Louis,SMU,0.46939465
+Saint Louis,TCU,0.49545372
+Saint Louis,Auburn,0.46976602
+Saint Louis,Santa Clara,0.41149035
+Saint Louis,Indiana,0.47309166
+Saint Louis,Texas,0.4696521
+Saint Louis,Texas A&M,0.47401386
+Saint Louis,VCU,0.47574112
+Saint Louis,San Diego St.,0.4745083
+Saint Louis,New Mexico,0.47713524
+Saint Louis,Oklahoma,0.47866282
+Saint Louis,Cincinnati,0.49255803
+Saint Louis,Tulsa,0.6130491
+Saint Louis,Baylor,0.46158344
+Saint Louis,UCF,0.53024954
+Saint Louis,Akron,0.56803894
+Saint Louis,Seton Hall,0.5006223
+Saint Louis,Virginia Tech,0.46761036
+Saint Louis,Washington,0.4867765
+Saint Louis,Missouri,0.4880964
+Saint Louis,West Virginia,0.59121805
+Saint Louis,Boise St.,0.53488505
+Saint Louis,Stanford,0.5416268
+Saint Louis,Florida St.,0.47260872
+Saint Louis,Belmont,0.59464103
+Saint Louis,Miami (OH),0.63236153
+Saint Louis,Northwestern,0.605077
+Saint Louis,Yale,0.597463
+Saint Louis,Wake Forest,0.6140258
+Saint Louis,California,0.5446704
+Ohio St.,UCLA,0.58566594
+Ohio St.,Miami (FL),0.5777565
+Ohio St.,Georgia,0.5879143
+Ohio St.,Clemson,0.5846938
+Ohio St.,Villanova,0.59026796
+Ohio St.,SMU,0.55826753
+Ohio St.,TCU,0.6268737
+Ohio St.,Auburn,0.5549097
+Ohio St.,Santa Clara,0.5440298
+Ohio St.,Indiana,0.5694033
+Ohio St.,Texas,0.5806839
+Ohio St.,Texas A&M,0.60251594
+Ohio St.,VCU,0.63781404
+Ohio St.,San Diego St.,0.5085664
+Ohio St.,New Mexico,0.5270386
+Ohio St.,Oklahoma,0.5644536
+Ohio St.,Cincinnati,0.5570333
+Ohio St.,Tulsa,0.6168937
+Ohio St.,Baylor,0.6370953
+Ohio St.,UCF,0.6435206
+Ohio St.,Akron,0.5810305
+Ohio St.,Seton Hall,0.50752515
+Ohio St.,Virginia Tech,0.5433888
+Ohio St.,Washington,0.61803806
+Ohio St.,Missouri,0.6252799
+Ohio St.,West Virginia,0.6100646
+Ohio St.,Boise St.,0.62693775
+Ohio St.,Stanford,0.56043506
+Ohio St.,Florida St.,0.61507696
+Ohio St.,Belmont,0.6006234
+Ohio St.,Miami (OH),0.6556921
+Ohio St.,Northwestern,0.63024664
+Ohio St.,Yale,0.6009686
+Ohio St.,Wake Forest,0.64575994
+Ohio St.,California,0.54394686
+UCLA,Miami (FL),0.57311875
+UCLA,Georgia,0.57767373
+UCLA,Clemson,0.5772483
+UCLA,Villanova,0.5870363
+UCLA,SMU,0.5341846
+UCLA,TCU,0.6320856
+UCLA,Auburn,0.52881366
+UCLA,Santa Clara,0.5721637
+UCLA,Indiana,0.57034355
+UCLA,Texas,0.5756248
+UCLA,Texas A&M,0.59228295
+UCLA,VCU,0.6331146
+UCLA,San Diego St.,0.5213569
+UCLA,New Mexico,0.53036755
+UCLA,Oklahoma,0.569265
+UCLA,Cincinnati,0.5659766
+UCLA,Tulsa,0.6138569
+UCLA,Baylor,0.6211545
+UCLA,UCF,0.64253277
+UCLA,Akron,0.5626949
+UCLA,Seton Hall,0.5109475
+UCLA,Virginia Tech,0.53324056
+UCLA,Washington,0.6061701
+UCLA,Missouri,0.6046989
+UCLA,West Virginia,0.6005852
+UCLA,Boise St.,0.6121259
+UCLA,Stanford,0.5415735
+UCLA,Florida St.,0.6121259
+UCLA,Belmont,0.59851164
+UCLA,Miami (OH),0.64441615
+UCLA,Northwestern,0.62055856
+UCLA,Yale,0.6009686
+UCLA,Wake Forest,0.6401725
+UCLA,California,0.54394686
+Miami (FL),Georgia,0.46710864
+Miami (FL),Clemson,0.43569002
+Miami (FL),Villanova,0.45286047
+Miami (FL),SMU,0.4587052
+Miami (FL),TCU,0.5388867
+Miami (FL),Auburn,0.47041923
+Miami (FL),Santa Clara,0.5494433
+Miami (FL),Indiana,0.42916253
+Miami (FL),Texas,0.47009593
+Miami (FL),Texas A&M,0.4669292
+Miami (FL),VCU,0.59057534
+Miami (FL),San Diego St.,0.477805
+Miami (FL),New Mexico,0.5156909
+Miami (FL),Oklahoma,0.42535052
+Miami (FL),Cincinnati,0.43968225
+Miami (FL),Tulsa,0.59992915
+Miami (FL),Baylor,0.55116206
+Miami (FL),UCF,0.61831486
+Miami (FL),Akron,0.5744462
+Miami (FL),Seton Hall,0.5084563
+Miami (FL),Virginia Tech,0.51884335
+Miami (FL),Washington,0.5951083
+Miami (FL),Missouri,0.4864337
+Miami (FL),West Virginia,0.59852
+Miami (FL),Boise St.,0.60938936
+Miami (FL),Stanford,0.5244775
+Miami (FL),Florida St.,0.50298405
+Miami (FL),Belmont,0.60171556
+Miami (FL),Miami (OH),0.64278305
+Miami (FL),Northwestern,0.6186269
+Miami (FL),Yale,0.6062478
+Miami (FL),Wake Forest,0.62549573
+Miami (FL),California,0.52548486
+Georgia,Clemson,0.44040772
+Georgia,Villanova,0.44457823
+Georgia,SMU,0.43420792
+Georgia,TCU,0.5857764
+Georgia,Auburn,0.4486835
+Georgia,Santa Clara,0.5270427
+Georgia,Indiana,0.4203214
+Georgia,Texas,0.52252126
+Georgia,Texas A&M,0.5308702
+Georgia,VCU,0.5613225
+Georgia,San Diego St.,0.5478721
+Georgia,New Mexico,0.5232609
+Georgia,Oklahoma,0.43115917
+Georgia,Cincinnati,0.4466816
+Georgia,Tulsa,0.57645184
+Georgia,Baylor,0.4804963
+Georgia,UCF,0.5908459
+Georgia,Akron,0.5339622
+Georgia,Seton Hall,0.5168715
+Georgia,Virginia Tech,0.5215399
+Georgia,Washington,0.55815643
+Georgia,Missouri,0.47927868
+Georgia,West Virginia,0.60328996
+Georgia,Boise St.,0.6176892
+Georgia,Stanford,0.54834676
+Georgia,Florida St.,0.5486368
+Georgia,Belmont,0.586016
+Georgia,Miami (OH),0.63182694
+Georgia,Northwestern,0.5963302
+Georgia,Yale,0.5979646
+Georgia,Wake Forest,0.5959671
+Georgia,California,0.53258574
+Clemson,Villanova,0.45096096
+Clemson,SMU,0.4849148
+Clemson,TCU,0.61174875
+Clemson,Auburn,0.48773143
+Clemson,Santa Clara,0.54153746
+Clemson,Indiana,0.4238236
+Clemson,Texas,0.55679214
+Clemson,Texas A&M,0.57590675
+Clemson,VCU,0.5788591
+Clemson,San Diego St.,0.5417162
+Clemson,New Mexico,0.595493
+Clemson,Oklahoma,0.44295186
+Clemson,Cincinnati,0.5252152
+Clemson,Tulsa,0.5904831
+Clemson,Baylor,0.5330554
+Clemson,UCF,0.57985806
+Clemson,Akron,0.5967458
+Clemson,Seton Hall,0.5110811
+Clemson,Virginia Tech,0.6047641
+Clemson,Washington,0.61694324
+Clemson,Missouri,0.5751776
+Clemson,West Virginia,0.61251074
+Clemson,Boise St.,0.6302099
+Clemson,Stanford,0.6003703
+Clemson,Florida St.,0.6233995
+Clemson,Belmont,0.57469946
+Clemson,Miami (OH),0.62180525
+Clemson,Northwestern,0.61694324
+Clemson,Yale,0.60276777
+Clemson,Wake Forest,0.6274605
+Clemson,California,0.58537287
+Villanova,SMU,0.4797403
+Villanova,TCU,0.5979456
+Villanova,Auburn,0.4503777
+Villanova,Santa Clara,0.5237712
+Villanova,Indiana,0.54538834
+Villanova,Texas,0.5549267
+Villanova,Texas A&M,0.5830936
+Villanova,VCU,0.56056315
+Villanova,San Diego St.,0.5492412
+Villanova,New Mexico,0.52578145
+Villanova,Oklahoma,0.5696585
+Villanova,Cincinnati,0.5479261
+Villanova,Tulsa,0.6082164
+Villanova,Baylor,0.54132116
+Villanova,UCF,0.6299005
+Villanova,Akron,0.6031571
+Villanova,Seton Hall,0.5137101
+Villanova,Virginia Tech,0.55104905
+Villanova,Washington,0.5497628
+Villanova,Missouri,0.60175425
+Villanova,West Virginia,0.6099226
+Villanova,Boise St.,0.59393716
+Villanova,Stanford,0.5423807
+Villanova,Florida St.,0.5349692
+Villanova,Belmont,0.6015242
+Villanova,Miami (OH),0.6341916
+Villanova,Northwestern,0.6153859
+Villanova,Yale,0.60171556
+Villanova,Wake Forest,0.6351452
+Villanova,California,0.52921003
+SMU,TCU,0.58047366
+SMU,Auburn,0.43282968
+SMU,Santa Clara,0.4733202
+SMU,Indiana,0.5191528
+SMU,Texas,0.5774913
+SMU,Texas A&M,0.55911696
+SMU,VCU,0.53489083
+SMU,San Diego St.,0.56968004
+SMU,New Mexico,0.56466913
+SMU,Oklahoma,0.5548571
+SMU,Cincinnati,0.5116962
+SMU,Tulsa,0.62489974
+SMU,Baylor,0.58844286
+SMU,UCF,0.59747154
+SMU,Akron,0.6312982
+SMU,Seton Hall,0.6174268
+SMU,Virginia Tech,0.5875579
+SMU,Washington,0.5030949
+SMU,Missouri,0.56071913
+SMU,West Virginia,0.61203295
+SMU,Boise St.,0.58210987
+SMU,Stanford,0.62066877
+SMU,Florida St.,0.57734525
+SMU,Belmont,0.63236153
+SMU,Miami (OH),0.63799316
+SMU,Northwestern,0.609316
+SMU,Yale,0.6399637
+SMU,Wake Forest,0.63410425
+SMU,California,0.6288837
+TCU,Auburn,0.43598282
+TCU,Santa Clara,0.43805784
+TCU,Indiana,0.40656915
+TCU,Texas,0.48290485
+TCU,Texas A&M,0.40429533
+TCU,VCU,0.5437698
+TCU,San Diego St.,0.53207266
+TCU,New Mexico,0.5516578
+TCU,Oklahoma,0.405351
+TCU,Cincinnati,0.41249505
+TCU,Tulsa,0.5555806
+TCU,Baylor,0.42256182
+TCU,UCF,0.47846416
+TCU,Akron,0.60257655
+TCU,Seton Hall,0.48457837
+TCU,Virginia Tech,0.45145345
+TCU,Washington,0.4383496
+TCU,Missouri,0.46641266
+TCU,West Virginia,0.5875488
+TCU,Boise St.,0.5726511
+TCU,Stanford,0.47620672
+TCU,Florida St.,0.5140231
+TCU,Belmont,0.5908746
+TCU,Miami (OH),0.6249017
+TCU,Northwestern,0.5415484
+TCU,Yale,0.5842461
+TCU,Wake Forest,0.56477267
+TCU,California,0.5607507
+Auburn,Santa Clara,0.46582934
+Auburn,Indiana,0.5257664
+Auburn,Texas,0.56536
+Auburn,Texas A&M,0.5222804
+Auburn,VCU,0.54043865
+Auburn,San Diego St.,0.5561915
+Auburn,New Mexico,0.56191146
+Auburn,Oklahoma,0.54630923
+Auburn,Cincinnati,0.50311095
+Auburn,Tulsa,0.6314024
+Auburn,Baylor,0.5747976
+Auburn,UCF,0.6146918
+Auburn,Akron,0.6212182
+Auburn,Seton Hall,0.61514664
+Auburn,Virginia Tech,0.5884145
+Auburn,Washington,0.6029957
+Auburn,Missouri,0.5696359
+Auburn,West Virginia,0.61203295
+Auburn,Boise St.,0.55594724
+Auburn,Stanford,0.6148564
+Auburn,Florida St.,0.5653523
+Auburn,Belmont,0.62775123
+Auburn,Miami (OH),0.6320704
+Auburn,Northwestern,0.6162207
+Auburn,Yale,0.6417509
+Auburn,Wake Forest,0.6312982
+Auburn,California,0.63003147
+Santa Clara,Indiana,0.4478177
+Santa Clara,Texas,0.5189536
+Santa Clara,Texas A&M,0.47349668
+Santa Clara,VCU,0.63234323
+Santa Clara,San Diego St.,0.5138973
+Santa Clara,New Mexico,0.515512
+Santa Clara,Oklahoma,0.47468954
+Santa Clara,Cincinnati,0.45737106
+Santa Clara,Tulsa,0.6279966
+Santa Clara,Baylor,0.55862784
+Santa Clara,UCF,0.6174712
+Santa Clara,Akron,0.53326994
+Santa Clara,Seton Hall,0.5057222
+Santa Clara,Virginia Tech,0.5502564
+Santa Clara,Washington,0.60401833
+Santa Clara,Missouri,0.543133
+Santa Clara,West Virginia,0.6006391
+Santa Clara,Boise St.,0.6048303
+Santa Clara,Stanford,0.5502564
+Santa Clara,Florida St.,0.612822
+Santa Clara,Belmont,0.61209583
+Santa Clara,Miami (OH),0.64440125
+Santa Clara,Northwestern,0.6050393
+Santa Clara,Yale,0.6141212
+Santa Clara,Wake Forest,0.61274415
+Santa Clara,California,0.5548808
+Indiana,Texas,0.6075549
+Indiana,Texas A&M,0.57651633
+Indiana,VCU,0.57099307
+Indiana,San Diego St.,0.5940819
+Indiana,New Mexico,0.6312982
+Indiana,Oklahoma,0.5593588
+Indiana,Cincinnati,0.56422544
+Indiana,Tulsa,0.62387156
+Indiana,Baylor,0.5566945
+Indiana,UCF,0.6139016
+Indiana,Akron,0.6364508
+Indiana,Seton Hall,0.6309252
+Indiana,Virginia Tech,0.62705475
+Indiana,Washington,0.6194364
+Indiana,Missouri,0.5909597
+Indiana,West Virginia,0.61815655
+Indiana,Boise St.,0.62543505
+Indiana,Stanford,0.62705475
+Indiana,Florida St.,0.6116757
+Indiana,Belmont,0.6280693
+Indiana,Miami (OH),0.6417509
+Indiana,Northwestern,0.62768066
+Indiana,Yale,0.63518935
+Indiana,Wake Forest,0.6336779
+Indiana,California,0.6312982
+Texas,Texas A&M,0.4642718
+Texas,VCU,0.54424304
+Texas,San Diego St.,0.5697155
+Texas,New Mexico,0.5660369
+Texas,Oklahoma,0.4169251
+Texas,Cincinnati,0.43101302
+Texas,Tulsa,0.62543505
+Texas,Baylor,0.43439144
+Texas,UCF,0.5441301
+Texas,Akron,0.61906004
+Texas,Seton Hall,0.56779015
+Texas,Virginia Tech,0.51826584
+Texas,Washington,0.47387183
+Texas,Missouri,0.47738016
+Texas,West Virginia,0.6184115
+Texas,Boise St.,0.5924504
+Texas,Stanford,0.5677811
+Texas,Florida St.,0.4997917
+Texas,Belmont,0.6314024
+Texas,Miami (OH),0.6242267
+Texas,Northwestern,0.60826826
+Texas,Yale,0.63287127
+Texas,Wake Forest,0.612822
+Texas,California,0.6245932
+Texas A&M,VCU,0.5537851
+Texas A&M,San Diego St.,0.5576831
+Texas A&M,New Mexico,0.54376864
+Texas A&M,Oklahoma,0.42508575
+Texas A&M,Cincinnati,0.44206604
+Texas A&M,Tulsa,0.6230799
+Texas A&M,Baylor,0.45437038
+Texas A&M,UCF,0.6048569
+Texas A&M,Akron,0.5800635
+Texas A&M,Seton Hall,0.5187645
+Texas A&M,Virginia Tech,0.56211895
+Texas A&M,Washington,0.5189594
+Texas A&M,Missouri,0.546572
+Texas A&M,West Virginia,0.60647464
+Texas A&M,Boise St.,0.60814106
+Texas A&M,Stanford,0.6088565
+Texas A&M,Florida St.,0.58483154
+Texas A&M,Belmont,0.6021719
+Texas A&M,Miami (OH),0.63518935
+Texas A&M,Northwestern,0.6141208
+Texas A&M,Yale,0.60031027
+Texas A&M,Wake Forest,0.62696904
+Texas A&M,California,0.555091
+VCU,San Diego St.,0.4471091
+VCU,New Mexico,0.43726802
+VCU,Oklahoma,0.45157787
+VCU,Cincinnati,0.46937054
+VCU,Tulsa,0.6006384
+VCU,Baylor,0.47535893
+VCU,UCF,0.4991231
+VCU,Akron,0.5410437
+VCU,Seton Hall,0.48699558
+VCU,Virginia Tech,0.4638899
+VCU,Washington,0.46210048
+VCU,Missouri,0.47252825
+VCU,West Virginia,0.54978067
+VCU,Boise St.,0.45295438
+VCU,Stanford,0.49356112
+VCU,Florida St.,0.45848176
+VCU,Belmont,0.6032237
+VCU,Miami (OH),0.63236153
+VCU,Northwestern,0.5344028
+VCU,Yale,0.61475307
+VCU,Wake Forest,0.55593866
+VCU,California,0.5300387
+San Diego St.,New Mexico,0.57121027
+San Diego St.,Oklahoma,0.4337526
+San Diego St.,Cincinnati,0.40821034
+San Diego St.,Tulsa,0.5668163
+San Diego St.,Baylor,0.43709508
+San Diego St.,UCF,0.52223086
+San Diego St.,Akron,0.5854377
+San Diego St.,Seton Hall,0.5437702
+San Diego St.,Virginia Tech,0.5015906
+San Diego St.,Washington,0.48364714
+San Diego St.,Missouri,0.45253047
+San Diego St.,West Virginia,0.601823
+San Diego St.,Boise St.,0.57588404
+San Diego St.,Stanford,0.52044874
+San Diego St.,Florida St.,0.4586395
+San Diego St.,Belmont,0.57002145
+San Diego St.,Miami (OH),0.5814677
+San Diego St.,Northwestern,0.5816119
+San Diego St.,Yale,0.57039976
+San Diego St.,Wake Forest,0.57460517
+San Diego St.,California,0.62980044
+New Mexico,Oklahoma,0.40648484
+New Mexico,Cincinnati,0.38918996
+New Mexico,Tulsa,0.53716
+New Mexico,Baylor,0.4625122
+New Mexico,UCF,0.479996
+New Mexico,Akron,0.56455785
+New Mexico,Seton Hall,0.4856464
+New Mexico,Virginia Tech,0.45111394
+New Mexico,Washington,0.4680514
+New Mexico,Missouri,0.4183518
+New Mexico,West Virginia,0.47701868
+New Mexico,Boise St.,0.43800834
+New Mexico,Stanford,0.4808623
+New Mexico,Florida St.,0.43593177
+New Mexico,Belmont,0.5853967
+New Mexico,Miami (OH),0.62387156
+New Mexico,Northwestern,0.470596
+New Mexico,Yale,0.6230799
+New Mexico,Wake Forest,0.54192644
+New Mexico,California,0.53640044
+Oklahoma,Cincinnati,0.5336247
+Oklahoma,Tulsa,0.63799316
+Oklahoma,Baylor,0.46271768
+Oklahoma,UCF,0.60971564
+Oklahoma,Akron,0.6249694
+Oklahoma,Seton Hall,0.627817
+Oklahoma,Virginia Tech,0.61534667
+Oklahoma,Washington,0.55774474
+Oklahoma,Missouri,0.5924046
+Oklahoma,West Virginia,0.6174268
+Oklahoma,Boise St.,0.6010374
+Oklahoma,Stanford,0.6238358
+Oklahoma,Florida St.,0.593676
+Oklahoma,Belmont,0.6343695
+Oklahoma,Miami (OH),0.6320704
+Oklahoma,Northwestern,0.62296706
+Oklahoma,Yale,0.6407458
+Oklahoma,Wake Forest,0.6321004
+Oklahoma,California,0.63003147
+Cincinnati,Tulsa,0.5711222
+Cincinnati,Baylor,0.5137249
+Cincinnati,UCF,0.568056
+Cincinnati,Akron,0.5683745
+Cincinnati,Seton Hall,0.6265422
+Cincinnati,Virginia Tech,0.59064764
+Cincinnati,Washington,0.570263
+Cincinnati,Missouri,0.56913203
+Cincinnati,West Virginia,0.6270209
+Cincinnati,Boise St.,0.58226323
+Cincinnati,Stanford,0.5871443
+Cincinnati,Florida St.,0.5659311
+Cincinnati,Belmont,0.5711222
+Cincinnati,Miami (OH),0.5780774
+Cincinnati,Northwestern,0.5747754
+Cincinnati,Yale,0.57722706
+Cincinnati,Wake Forest,0.568056
+Cincinnati,California,0.6259542
+Tulsa,Baylor,0.36888582
+Tulsa,UCF,0.4614866
+Tulsa,Akron,0.5520385
+Tulsa,Seton Hall,0.50203645
+Tulsa,Virginia Tech,0.47349298
+Tulsa,Washington,0.45565864
+Tulsa,Missouri,0.3952519
+Tulsa,West Virginia,0.4996713
+Tulsa,Boise St.,0.44582096
+Tulsa,Stanford,0.48074836
+Tulsa,Florida St.,0.4465424
+Tulsa,Belmont,0.59261453
+Tulsa,Miami (OH),0.6212182
+Tulsa,Northwestern,0.4815233
+Tulsa,Yale,0.6210591
+Tulsa,Wake Forest,0.46371412
+Tulsa,California,0.4952703
+Baylor,UCF,0.5417664
+Baylor,Akron,0.60798657
+Baylor,Seton Hall,0.5980433
+Baylor,Virginia Tech,0.6037035
+Baylor,Washington,0.47342917
+Baylor,Missouri,0.5750719
+Baylor,West Virginia,0.604878
+Baylor,Boise St.,0.57839817
+Baylor,Stanford,0.60957485
+Baylor,Florida St.,0.5837331
+Baylor,Belmont,0.6324473
+Baylor,Miami (OH),0.6242267
+Baylor,Northwestern,0.5627621
+Baylor,Yale,0.6328714
+Baylor,Wake Forest,0.62699276
+Baylor,California,0.6271811
+UCF,Akron,0.5191199
+UCF,Seton Hall,0.53831154
+UCF,Virginia Tech,0.5590024
+UCF,Washington,0.44021878
+UCF,Missouri,0.4493983
+UCF,West Virginia,0.56112695
+UCF,Boise St.,0.5272876
+UCF,Stanford,0.55929565
+UCF,Florida St.,0.5236139
+UCF,Belmont,0.5359515
+UCF,Miami (OH),0.62666845
+UCF,Northwestern,0.44897074
+UCF,Yale,0.5782153
+UCF,Wake Forest,0.58187604
+UCF,California,0.55515504
+Akron,Seton Hall,0.4906002
+Akron,Virginia Tech,0.43912417
+Akron,Washington,0.45505887
+Akron,Missouri,0.39834815
+Akron,West Virginia,0.4982245
+Akron,Boise St.,0.45154262
+Akron,Stanford,0.46716067
+Akron,Florida St.,0.39424267
+Akron,Belmont,0.48201635
+Akron,Miami (OH),0.60861766
+Akron,Northwestern,0.4739502
+Akron,Yale,0.6065094
+Akron,Wake Forest,0.48129058
+Akron,California,0.49155045
+Seton Hall,Virginia Tech,0.45658243
+Seton Hall,Washington,0.4231719
+Seton Hall,Missouri,0.42790243
+Seton Hall,West Virginia,0.56261873
+Seton Hall,Boise St.,0.5281672
+Seton Hall,Stanford,0.43547142
+Seton Hall,Florida St.,0.45203057
+Seton Hall,Belmont,0.51561874
+Seton Hall,Miami (OH),0.5666076
+Seton Hall,Northwestern,0.43321112
+Seton Hall,Yale,0.5668163
+Seton Hall,Wake Forest,0.48335987
+Seton Hall,California,0.5725012
+Virginia Tech,Washington,0.41699797
+Virginia Tech,Missouri,0.43637547
+Virginia Tech,West Virginia,0.57075685
+Virginia Tech,Boise St.,0.5734667
+Virginia Tech,Stanford,0.48551226
+Virginia Tech,Florida St.,0.5114947
+Virginia Tech,Belmont,0.6249017
+Virginia Tech,Miami (OH),0.62387156
+Virginia Tech,Northwestern,0.46435857
+Virginia Tech,Yale,0.6249017
+Virginia Tech,Wake Forest,0.54846185
+Virginia Tech,California,0.5950803
+Washington,Missouri,0.5355428
+Washington,West Virginia,0.5727376
+Washington,Boise St.,0.5694026
+Washington,Stanford,0.59143436
+Washington,Florida St.,0.5425347
+Washington,Belmont,0.58965164
+Washington,Miami (OH),0.62387156
+Washington,Northwestern,0.58151394
+Washington,Yale,0.6259542
+Washington,Wake Forest,0.5905871
+Washington,California,0.5966666
+Missouri,West Virginia,0.61435455
+Missouri,Boise St.,0.5835446
+Missouri,Stanford,0.5469051
+Missouri,Florida St.,0.53962433
+Missouri,Belmont,0.6165904
+Missouri,Miami (OH),0.63518935
+Missouri,Northwestern,0.5905083
+Missouri,Yale,0.6165904
+Missouri,Wake Forest,0.6272472
+Missouri,California,0.61118346
+West Virginia,Boise St.,0.5021759
+West Virginia,Stanford,0.4483977
+West Virginia,Florida St.,0.4102926
+West Virginia,Belmont,0.51416606
+West Virginia,Miami (OH),0.5666076
+West Virginia,Northwestern,0.43617475
+West Virginia,Yale,0.56771046
+West Virginia,Wake Forest,0.48016164
+West Virginia,California,0.5778248
+Boise St.,Stanford,0.45220485
+Boise St.,Florida St.,0.44603714
+Boise St.,Belmont,0.6259542
+Boise St.,Miami (OH),0.62077737
+Boise St.,Northwestern,0.46606538
+Boise St.,Yale,0.6249252
+Boise St.,Wake Forest,0.50218457
+Boise St.,California,0.59840924
+Stanford,Florida St.,0.4966851
+Stanford,Belmont,0.54119754
+Stanford,Miami (OH),0.6228459
+Stanford,Northwestern,0.4317041
+Stanford,Yale,0.6249017
+Stanford,Wake Forest,0.4664427
+Stanford,California,0.5770665
+Florida St.,Belmont,0.6249252
+Florida St.,Miami (OH),0.62595206
+Florida St.,Northwestern,0.53616714
+Florida St.,Yale,0.6231034
+Florida St.,Wake Forest,0.54990673
+Florida St.,California,0.6061807
+Belmont,Miami (OH),0.5441209
+Belmont,Northwestern,0.4711181
+Belmont,Yale,0.5694902
+Belmont,Wake Forest,0.47082055
+Belmont,California,0.47993317
+Miami (OH),Northwestern,0.40486413
+Miami (OH),Yale,0.46233907
+Miami (OH),Wake Forest,0.4079678
+Miami (OH),California,0.44579935
+Northwestern,Yale,0.6259542
+Northwestern,Wake Forest,0.58496684
+Northwestern,California,0.5692716
+Yale,Wake Forest,0.37320247
+Yale,California,0.39884847
+Wake Forest,California,0.58267105

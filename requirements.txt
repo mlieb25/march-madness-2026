@@ -1,0 +1,25 @@
+# March Madness ML — pinned dependency list
+# Generate a fresh lock with: pip freeze > requirements.txt
+
+# Data pulling & scraping
+pandas>=2.0
+requests>=2.31
+cloudscraper>=1.2.71
+lxml>=4.9
+html5lib>=1.1
+
+# Modelling
+scikit-learn>=1.4
+xgboost>=2.0
+lightgbm>=4.0
+joblib>=1.3        # model persistence
+
+# Visualisation
+matplotlib>=3.8
+
+# App (Phase 7)
+streamlit>=1.32
+plotly>=5.20
+
+# Optional — Sports-Reference scraper (unmaintained; use only if endpoint is live)
+# sportsipy>=0.6

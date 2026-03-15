@@ -1,0 +1,32 @@
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and models (to avoid GitHub size limits)
+data/march-machine-learning-mania-2026/
+data/*.zip
+data/models/
+data/march-machine-learning-mania-2026.zip
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Streamlit
+.streamlit/
+!app/.streamlit/

@@ -1,0 +1,360 @@
+/* =============================================================================
+   assets/style.css  —  March Madness ML 2026
+   Global stylesheet loaded by utils/style.py → inject_css()
+   Augments the inline styles in app.py and each page.
+   ============================================================================= */
+
+/* ── Google Fonts ────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── CSS custom properties (design tokens) ──────────────────────────────── */
+:root {
+  /* Palette */
+  --bg-primary:        #0d1b2a;
+  --bg-secondary:      #1b2838;
+  --bg-card:           #1e2a3a;
+  --bg-card-hover:     #243040;
+  --border-subtle:     #2e4060;
+  --border-focus:      #1976D2;
+
+  /* Text */
+  --text-primary:      #e8ecf0;
+  --text-secondary:    #9ab;
+  --text-muted:        #5a6a7a;
+
+  /* Brand accent */
+  --blue-bright:       #1976D2;
+  --blue-dark:         #1565C0;
+  --gold:              #FFD700;
+  --orange:            #E64A19;
+  --green:             #43A047;
+  --red:               #E53935;
+
+  /* Rounds */
+  --r64:  #1565C0;
+  --r32:  #1976D2;
+  --s16:  #388E3C;
+  --e8:   #F57C00;
+  --ff:   #E64A19;
+  --champ: #FFD700;
+
+  /* Sizing */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --transition:  0.2s ease;
+}
+
+/* ── Base reset ──────────────────────────────────────────────────────────── */
+html,
+body,
+[class*="css"] {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-primary);
+}
+
+/* ── Streamlit chrome overrides ──────────────────────────────────────────── */
+#MainMenu,
+footer,
+header[data-testid="stHeader"] {
+  visibility: hidden;
+  height: 0;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  border-right: 1px solid var(--border-subtle);
+}
+[data-testid="stSidebar"] .stMarkdown p,
+[data-testid="stSidebar"] .stMarkdown li {
+  color: #c9d4de;
+  font-size: 0.88rem;
+}
+[data-testid="stSidebar"] label {
+  color: var(--text-primary) !important;
+}
+[data-testid="stSidebar"] hr {
+  border-color: var(--border-subtle);
+}
+
+/* Selectbox / multiselect */
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div,
+[data-testid="stMultiSelect"] div[data-baseweb="select"] > div {
+  background: var(--bg-card);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+}
+
+/* Slider */
+[data-testid="stSlider"] .stSlider > div > div > div {
+  background: var(--blue-bright);
+}
+
+/* Expander */
+[data-testid="stExpander"] {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+[data-testid="stExpander"] summary {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Tabs */
+[data-testid="stTabs"] [role="tab"] {
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+[data-testid="stTabs"] [role="tab"][aria-selected="true"] {
+  color: var(--blue-bright);
+  border-bottom-color: var(--blue-bright);
+}
+
+/* Metric delta */
+[data-testid="stMetricDelta"] {
+  font-size: 0.78rem;
+}
+
+/* Spinner */
+[data-testid="stSpinner"] > div {
+  border-top-color: var(--blue-bright) !important;
+}
+
+/* Dataframe / table */
+[data-testid="stDataFrame"] thead tr th {
+  background: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+[data-testid="stDataFrame"] tbody tr:nth-child(odd) td {
+  background: rgba(30, 42, 58, 0.6) !important;
+}
+
+/* ── Layout helpers ──────────────────────────────────────────────────────── */
+.mm-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.mm-card {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-card-hover));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.mm-card:hover {
+  border-color: var(--border-focus);
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+}
+
+/* ── Metric card ─────────────────────────────────────────────────────────── */
+.metric-card {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-card-hover));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+.metric-card .value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.1;
+}
+.metric-card .label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* ── Page header ─────────────────────────────────────────────────────────── */
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--blue-bright), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.section-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--blue-bright);
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+}
+
+/* ── Badges ──────────────────────────────────────────────────────────────── */
+.seed-badge {
+  display: inline-block;
+  background: var(--blue-dark);
+  color: white;
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-right: 6px;
+}
+.conf-badge {
+  display: inline-block;
+  background: var(--border-subtle);
+  color: #c9d4de;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+.upset-badge {
+  background: linear-gradient(135deg, var(--orange), #BF360C);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.round-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  color: white;
+}
+.round-badge.r64   { background: var(--r64);  }
+.round-badge.r32   { background: var(--r32);  }
+.round-badge.s16   { background: var(--s16);  }
+.round-badge.e8    { background: var(--e8);   }
+.round-badge.ff    { background: var(--ff);   }
+.round-badge.champ { background: var(--champ); color: #111; }
+
+/* ── Probability bar ─────────────────────────────────────────────────────── */
+.prob-bar-container {
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  height: 36px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.prob-bar-a {
+  background: linear-gradient(90deg, var(--blue-dark), var(--blue-bright));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  transition: width 0.4s ease;
+}
+.prob-bar-b {
+  background: linear-gradient(90deg, #C62828, #D32F2F);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: width 0.4s ease;
+}
+
+/* ── Bracket slot ────────────────────────────────────────────────────────── */
+.bracket-slot {
+  background: var(--bg-card);
+  border-left: 3px solid var(--blue-dark);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 4px 10px;
+  margin: 1px 0;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color var(--transition);
+}
+.bracket-slot:hover {
+  border-left-color: var(--gold);
+  background: var(--bg-card-hover);
+}
+.bracket-slot.winner {
+  border-left-color: var(--green);
+  font-weight: 700;
+}
+
+/* ── Edge / diff indicators ──────────────────────────────────────────────── */
+.edge-positive { color: var(--green); font-weight: 600; }
+.edge-negative { color: var(--red);   font-weight: 600; }
+.edge-neutral  { color: var(--text-secondary); }
+
+/* ── Hero banner gradient text ──────────────────────────────────────────── */
+.hero-gradient-text {
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--blue-bright), var(--gold), var(--orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Divider ─────────────────────────────────────────────────────────────── */
+.mm-divider {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 20px 0;
+}
+
+/* ── SHAP waterfall container ────────────────────────────────────────────── */
+.shap-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-top: 12px;
+}
+
+/* ── Scrollable table container ──────────────────────────────────────────── */
+.mm-table-scroll {
+  max-height: 480px;
+  overflow-y: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+.mm-table-scroll::-webkit-scrollbar       { width: 6px; }
+.mm-table-scroll::-webkit-scrollbar-track { background: var(--bg-secondary); }
+.mm-table-scroll::-webkit-scrollbar-thumb { background: var(--border-subtle); border-radius: 3px; }
+
+/* ── Champion probability pill ───────────────────────────────────────────── */
+.champ-pill {
+  display: inline-block;
+  background: linear-gradient(90deg, #7B6000, var(--gold));
+  color: #0d1b2a;
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+/* ── Responsive adjustments ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-title        { font-size: 1.4rem; }
+  .hero-gradient-text { font-size: 1.8rem; }
+  .metric-card .value { font-size: 1.5rem; }
+}

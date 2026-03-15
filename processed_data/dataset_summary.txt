@@ -1,0 +1,11 @@
+MARCH MADNESS MASTER DATASET SUMMARY
+==================================================
+
+total_teams............................. 381
+total_seasons........................... 42
+team_season_records..................... 13753
+tournament_games........................ 2585
+regular_season_games.................... 198079
+features_in_team_stats.................. 28
+seasons_with_detailed_stats............. 24
+has_external_ratings.................... True

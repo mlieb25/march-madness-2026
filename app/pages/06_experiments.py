@@ -97,17 +97,33 @@ def load_all():
     p = DATA_DIR / "phase6_upset_paths.csv"
     out["p6_upsets"] = pd.read_csv(p) if p.exists() else pd.DataFrame()
 
-    # Training data shape
-    p = DATA_DIR / "ml_training_data.csv"
-    if p.exists():
-        train = pd.read_csv(p)
-        out["train_shape"] = (len(train), train.shape[1])
-        out["train_years"] = sorted(train["year"].unique().tolist()) if "year" in train.columns else []
-        out["train_balance"] = float(train["favorite_win_flag"].mean()) if "favorite_win_flag" in train.columns else 0.5
+    # Training data shape — prefer V2, fall back to V1
+    for train_file in ["ml_training_data_v2.csv", "ml_training_data.csv"]:
+        p = DATA_DIR / train_file
+        if p.exists():
+            train = pd.read_csv(p)
+            out["train_shape"]   = (len(train), train.shape[1])
+            out["train_file"]    = train_file
+            out["train_years"]   = sorted(train["year"].unique().tolist()) if "year" in train.columns else []
+            out["train_balance"] = float(train["favorite_win_flag"].mean()) if "favorite_win_flag" in train.columns else 0.5
+            break
     else:
-        out["train_shape"] = (0, 0)
-        out["train_years"] = []
+        out["train_shape"]   = (0, 0)
+        out["train_file"]    = "(none)"
+        out["train_years"]   = []
         out["train_balance"] = 0.5
+
+    # V2 ETL summary
+    v2_path = DATA_DIR / "etl_v2_summary.json"
+    out["etl_v2_summary"] = json.loads(v2_path.read_text()) if v2_path.exists() else {}
+
+    # V2 inference data shape
+    inf_v2 = DATA_DIR / "ml_inference_data_2026_v2.csv"
+    if inf_v2.exists():
+        inf_df = pd.read_csv(inf_v2)
+        out["inference_v2_shape"] = (len(inf_df), inf_df.shape[1])
+    else:
+        out["inference_v2_shape"] = (0, 0)
 
     return out
 
@@ -662,77 +678,84 @@ with tab_data:
     st.markdown("### Data Pipeline & Feature Engineering")
 
     n_rows, n_cols = data["train_shape"]
-    years = data["train_years"]
-    balance = data["train_balance"]
+    years          = data["train_years"]
+    balance        = data["train_balance"]
+    v2             = data.get("etl_v2_summary", {})
+    train_file     = data.get("train_file", "ml_training_data.csv")
+    is_v2          = "v2" in train_file
+    inf_rows, _    = data.get("inference_v2_shape", (0, 0))
 
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Training Rows",  f"{n_rows:,}")
-    col2.metric("Columns",        n_cols)
-    col3.metric("Label Balance",  f"{balance:.1%}",
-                help="Fraction of games where the 'favorite' won — should be ~0.5")
-    col4.metric("Seasons",        f"{min(years)}" + ("–" + str(max(years)) if len(years) > 1 else "")
-                if years else "—")
+    if is_v2:
+        st.success(
+            f"**V2 Pipeline Active** — `{train_file}` · "
+            f"{n_rows:,} rows · {v2.get('features_training', n_cols)} features · "
+            f"{v2.get('year_range','1985–2025')} · {v2.get('seasons_covered',40)} seasons",
+            icon="✅",
+        )
+    else:
+        st.warning(f"Using V1 training data (`{train_file}`). Run `etl_v2.py` for the full dataset.", icon="⚠️")
+
+    col1, col2, col3, col4, col5 = st.columns(5)
+    col1.metric("Training Rows",     f"{n_rows:,}")
+    col2.metric("Features",          v2.get("features_training", n_cols))
+    col3.metric("Inference Matchups",f"{inf_rows:,}" if inf_rows else f"{v2.get('inference_matchups',1953):,}")
+    col4.metric("Seasons",           v2.get("year_range", f"{min(years)}–{max(years)}") if years else "—")
+    col5.metric("Label Balance",     f"{balance:.1%}")
 
     st.markdown("---")
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("#### 12 Pairwise Features")
-        from utils.shap_utils import FEATURES, FEATURE_LABELS
-        feat_rows = [{"Feature": f,
-                      "Description": FEATURE_LABELS.get(f, f),
-                      "Type": "Difference (A − B)" if "_diff" in f else "Ratio (A ÷ B)"}
-                     for f in FEATURES]
+        st.markdown("#### Feature Groups (V2)")
+        feat_rows = [
+            {"Group": "Basic Stats",       "Features": "WinPct, PPG, OppPPG, PointDiff, HomeWinPct, AwayWinPct", "Format": "Diff"},
+            {"Group": "Four Factors",      "Features": "eFG%, TOV Rate, ORB Rate, FTA Rate (2003+)",              "Format": "Diff"},
+            {"Group": "Torvik Efficiency", "Features": "adjOE, adjDE, Barthag, SoS, WAB, Tempo",                  "Format": "Diff + Ratio"},
+            {"Group": "Massey Ordinals",   "Features": "POM, SAG, RPI, DOK, COL rank differentials",              "Format": "Diff"},
+            {"Group": "Seeding",           "Features": "SeedNum (tournament years only)",                          "Format": "Diff"},
+        ]
         st.dataframe(pd.DataFrame(feat_rows), use_container_width=True, hide_index=True)
 
+        st.markdown("#### Time-Aware Split")
+        st.code("Train: 1985–2013\nTest:  2014  (held out)")
+
     with col2:
-        st.markdown("#### Data Sources")
+        st.markdown("#### Data Sources (V2)")
         st.markdown("""
         | Source | Contents | Seasons |
         |---|---|---|
+        | **Kaggle MM Mania 2026** | Box scores, wins, Four Factors | 1985–2025 |
         | **Barttorvik** | adjOE, adjDE, Barthag, SoS, WAB, Tempo | 2008–2026 |
-        | **FiveThirtyEight** | Historical tournament outcomes (ground truth) | 2008–2025 |
-        | **NCAA NET** | Current 2026 rankings (bracket seeding) | 2026 |
-        | **Kaggle MM Mania 2026** | Live tournament results (live scoring) | 2026 |
+        | **FiveThirtyEight** | Tournament outcomes (ground truth) | 2008–2025 |
+        | **NCAA NET** | 2026 rankings (bracket seeding) | 2026 |
         """)
 
-        st.markdown("#### Symmetry Augmentation")
-        st.markdown("""
-        Each historical game is doubled:
-        - Original: Team A vs Team B with label `1`
-        - Flipped: Team B vs Team A with label `0`
-
-        **Why:** Prevents the model from over-indexing on which team appears first.
-        Diffs negate, ratios invert, label flips — symmetry is verified in `test_merge.py`.
-        """)
-
-        st.markdown("#### Time-Aware Split")
-        st.markdown("""
-        ```
-        Train: 2011 – 2013  (historical seasons)
-        Test:  2014          (completely held out)
-        ```
-        No shuffle, no cross-year contamination. This mirrors real deployment
-        where we train on past seasons and predict the current one.
-        """)
+        missing = v2.get("missing_data_pct", {}).get("training", {})
+        if missing:
+            st.markdown("#### Missing Data (V2 Training)")
+            miss_rows = [{"Feature": k, "Missing %": f"{v:.0f}%"}
+                         for k, v in sorted(missing.items(), key=lambda x: -x[1])]
+            st.dataframe(pd.DataFrame(miss_rows), use_container_width=True, hide_index=True, height=220)
+            st.caption("Torvik & Four Factors missing pre-2003/2008; imputed via median in model.")
 
     if years:
-        st.markdown("#### Training Data — Games per Season")
+        st.markdown("#### Training Data — Rows per Season")
         try:
-            train = pd.read_csv(DATA_DIR / "ml_training_data.csv")
+            train = pd.read_csv(DATA_DIR / train_file)
             if "year" in train.columns:
                 gpsy = train.groupby("year").size().reset_index(name="games")
-                fig_yr = dark_fig(height=260,
-                                   title=dict(text="Rows per Season (after symmetry doubling)",
+                fig_yr = dark_fig(height=300,
+                                   title=dict(text=f"Rows per Season — {train_file}",
                                               font=dict(color="#e8ecf0")))
                 fig_yr.add_trace(go.Bar(
                     x=gpsy["year"].astype(str), y=gpsy["games"],
-                    marker_color="#1976D2",
+                    marker_color=["#FFD700" if y >= 2014 else "#1976D2" for y in gpsy["year"]],
                     text=gpsy["games"], textposition="outside",
-                    textfont=dict(color="#e8ecf0", size=8.5),
+                    textfont=dict(color="#e8ecf0", size=7),
                 ))
-                fig_yr.update_xaxes(title="Season", tickangle=-30, **AXIS_STYLE)
+                fig_yr.update_xaxes(title="Season", tickangle=-45, **AXIS_STYLE)
                 fig_yr.update_yaxes(title="Row Count", **AXIS_STYLE)
                 st.plotly_chart(fig_yr, use_container_width=True, config={"displayModeBar": False})
+                st.caption("🟡 Gold = holdout year (2014+) · 🔵 Blue = training years")
         except Exception:
             pass

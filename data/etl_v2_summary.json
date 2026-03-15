@@ -1,0 +1,47 @@
+{
+  "training_samples": 5170,
+  "inference_matchups": 1953,
+  "seasons_covered": 40,
+  "year_range": "1985-2025",
+  "features_training": 17,
+  "features_inference": 21,
+  "missing_data_pct": {
+    "training": {
+      "eFGDiff": 43.9458413926499,
+      "TOV_RateDiff": 43.9458413926499,
+      "adjoe_diff": 63.0174081237911,
+      "adjoe_ratio": 63.0174081237911,
+      "adjde_diff": 63.0174081237911,
+      "adjde_ratio": 63.0174081237911,
+      "barthag_diff": 63.0174081237911,
+      "barthag_ratio": 63.0174081237911,
+      "sos_diff": 63.0174081237911,
+      "sos_ratio": 63.0174081237911,
+      "wab_diff": 63.0174081237911,
+      "wab_ratio": 63.0174081237911,
+      "adjt_diff": 63.0174081237911,
+      "adjt_ratio": 63.0174081237911
+    },
+    "inference": {
+      "SeedNum_diff": 100.0,
+      "adjoe_diff": 3.1746031746031744,
+      "adjoe_ratio": 3.1746031746031744,
+      "adjde_diff": 3.1746031746031744,
+      "adjde_ratio": 3.1746031746031744,
+      "barthag_diff": 3.1746031746031744,
+      "barthag_ratio": 3.1746031746031744,
+      "sos_diff": 3.1746031746031744,
+      "sos_ratio": 3.1746031746031744,
+      "wab_diff": 3.1746031746031744,
+      "wab_ratio": 3.1746031746031744,
+      "adjt_diff": 3.1746031746031744,
+      "adjt_ratio": 3.1746031746031744
+    }
+  },
+  "data_sources": {
+    "master_dataset": true,
+    "fivethirtyeight": true,
+    "torvik": true,
+    "ncaa_net": true
+  }
+}

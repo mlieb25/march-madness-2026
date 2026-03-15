@@ -1,0 +1,50 @@
+{
+  "total_time_seconds": 123.51387882232666,
+  "phases_run": 7,
+  "phases_successful": 7,
+  "phases_failed": 0,
+  "results": [
+    {
+      "phase": "Phase 0: Master Dataset Creation",
+      "script": "build_master_dataset.py",
+      "success": true,
+      "required": true
+    },
+    {
+      "phase": "Phase 1: Enhanced ETL",
+      "script": "etl_v2.py",
+      "success": true,
+      "required": true
+    },
+    {
+      "phase": "Phase 2: Baseline Models",
+      "script": "phase2_baselines.py",
+      "success": true,
+      "required": false
+    },
+    {
+      "phase": "Phase 3: Model Search",
+      "script": "phase3_model_search.py",
+      "success": true,
+      "required": false
+    },
+    {
+      "phase": "Phase 4: Calibration",
+      "script": "phase4.py",
+      "success": true,
+      "required": false
+    },
+    {
+      "phase": "Phase 5: Ensemble",
+      "script": "phase5_ensemble.py",
+      "success": true,
+      "required": false
+    },
+    {
+      "phase": "Phase 6: Tournament Simulation",
+      "script": "phase6_simulation.py",
+      "success": true,
+      "required": false
+    }
+  ]
+}

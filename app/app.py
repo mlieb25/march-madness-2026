@@ -44,9 +44,13 @@ def _load_home_data():
     ev_path = DATA_DIR / "phase6_pool_ev.csv"
     ev_df   = pd.read_csv(ev_path) if ev_path.exists() else pd.DataFrame()
 
-    return sim_df, p4, p5, ev_df
+    # V2 ETL summary (feature / sample counts)
+    v2_summary_path = DATA_DIR / "etl_v2_summary.json"
+    v2_summary = json.loads(v2_summary_path.read_text()) if v2_summary_path.exists() else {}
 
-sim_df, p4_combos, p5_weights, ev_df = _load_home_data()
+    return sim_df, p4, p5, ev_df, v2_summary
+
+sim_df, p4_combos, p5_weights, ev_df, v2_summary = _load_home_data()
 
 # Best log loss across all phases (Phase 2 baseline, Phase 4 best, Phase 5 ensemble)
 baseline_ll = 0.5040  # from latest models.py run (Phase 2)
@@ -160,9 +164,13 @@ with m3:
               help="Full 64-team bracket simulated 10,000 times")
 
 with m4:
-    st.metric("Features", "12",
-              delta="6 diffs + 6 ratios",
-              help="adjOE, adjDE, Barthag, SoS, WAB, Tempo — as differences and ratios")
+    n_features   = v2_summary.get("features_training", 12)
+    n_train_rows = v2_summary.get("training_samples", 474)
+    yr_range     = v2_summary.get("year_range", "2003-2024")
+    st.metric("Features",
+              str(n_features),
+              delta=f"{n_train_rows:,} rows · {yr_range}",
+              help="V2 pipeline: basic stats, Four Factors, Torvik efficiency, Massey ordinals")
 
 with m5:
     if top_team is not None:
@@ -355,7 +363,7 @@ st.markdown("---")
 st.markdown("## 🔧 Pipeline Status")
 
 phases = [
-    ("Phase 1", "ETL & Feature Factory",          "data/ml_training_data.csv",           "472 rows · 12 features"),
+    ("Phase 1", "ETL & Feature Factory (V2)",      "data/ml_training_data_v2.csv",        f"{v2_summary.get('training_samples', 5170):,} rows · {v2_summary.get('features_training', 17)} features · {v2_summary.get('year_range','1985-2025')}"),
     ("Phase 2", "Baseline Logistic Regression",   "data/phase2_results.csv",             "LL 0.5112 · Brier 0.1732"),
     ("Phase 3", "Bayesian Model Search",          "data/phase3_cv_results.csv",          "4 families · 35 trials each"),
     ("Phase 4", "Calibration Search",             "data/phase4_calibration_results.csv", "Best: EN+Isotonic LL 0.4806"),

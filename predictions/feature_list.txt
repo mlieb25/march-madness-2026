@@ -1,0 +1,26 @@
+PREDICTION FEATURES
+==================================================
+
+  1. Season
+  2. Team1ID
+  3. Team2ID
+  4. ID
+  5. WinPct_Diff
+  6. PPG_Diff
+  7. OppPPG_Diff
+  8. PointDiff_Diff
+  9. HomeWinPct_Diff
+ 10. AwayWinPct_Diff
+ 11. eFG_Diff
+ 12. FTA_Rate_Diff
+ 13. TOV_Rate_Diff
+ 14. ORB_Rate_Diff
+ 15. TRB_Diff
+ 16. Ast_Diff
+ 17. Stl_Diff
+ 18. Blk_Diff
+ 19. POM_Rank_Diff
+ 20. RPI_Rank_Diff
+ 21. DOK_Rank_Diff
+ 22. COL_Rank_Diff
+ 23. SameConference

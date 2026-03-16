@@ -145,7 +145,7 @@ def render_bracket(
     for reg, meta in REGION_META.items():
         y_off    = meta["y_off"]
         left     = meta["side"] == "left"
-        x_rounds = LEFT_X if left else RIGHT_X[::-1]  # order R64 → E8
+        x_rounds = LEFT_X if left else RIGHT_X  # Order: outside-in (R64 → E8)
         round_ys = _round_ys(y_off)
 
         # Get region teams in BRACKET_SEED_ORDER
@@ -239,11 +239,15 @@ def render_bracket(
         y_b = FIG_H * 0.65
         y_w = FIG_H / 2
 
-        add_line(LEFT_X[-1] if reg_a == "W" else RIGHT_X[-1][::-1] if False else RIGHT_X[0],
-                 round_ys["W" if reg_a == "W" else "Z"][3][0] if False else y_a,
-                 ff_x, y_a, color="#FFD700", width=1.5)
-        add_slot(ff_x, y_a, na, sa, ca, 0, prob if reg_a == reg_a else 1-prob, reg_a in ["W","X"])
-        add_slot(ff_x, y_b, nb, sb, cb, 0, 1-prob if prob >= 0.5 else prob, reg_b in ["W","X"])
+        left_side = reg_a in ["W", "X"]
+        x_e8_winner = LEFT_X[-1] if left_side else RIGHT_X[-1]
+
+        # Lines from Elite 8 winners to Semi-Final slots
+        add_line(x_e8_winner, y_a, ff_x, y_a, color="#FFD700", width=1.5)
+        add_line(x_e8_winner, y_b, ff_x, y_b, color="#FFD700", width=1.5)
+
+        add_slot(ff_x, y_a, na, sa, ca, 0, prob if left_side else 1-prob, left_side)
+        add_slot(ff_x, y_b, nb, sb, cb, 0, 1-prob if prob >= 0.5 else prob, left_side)
         add_line(ff_x, y_a, ff_x, y_b, color="#2e4060")
         add_line(ff_x, y_w, CHAMP_X, y_w, color="#FFD700", width=1.8)
         add_slot(CHAMP_X, y_w if reg_a == "W" else FIG_H * 0.4,

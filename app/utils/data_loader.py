@@ -38,6 +38,20 @@ def _seed_region_order(seed_num: int):
 BRACKET_SEED_ORDER = [1, 16, 8, 9, 5, 12, 4, 13, 6, 11, 3, 14, 7, 10, 2, 15]
 REGION_CODE_MAP    = {"East": "W", "West": "X", "South": "Y", "Midwest": "Z"}
 
+# ── Team name aliases for robust matching ─────────────────────────────────────
+# Maps Matchup Name (matchups_2026.csv) -> NET Name (ncaa_net.csv)
+ALIAS_MAP = {
+    "Northern Iowa":    "UNI",
+    "South Florida":    "South Fla.",
+    "Ohio State":       "Ohio St.",
+    "Iowa State":       "Iowa St.",
+    "North Dakota St":  "North Dakota St.",
+    "N Dakota St":      "North Dakota St.",
+    "CA Baptist":       "California Baptist",
+    "Long Island":      "LIU",
+    "Utah State":       "Utah St.",
+}
+
 
 # ── Private helpers ────────────────────────────────────────────────────────────
 def _parse_record(record: str):
@@ -92,28 +106,31 @@ def _assign_seeds_from_matchups(net_df: pd.DataFrame) -> pd.DataFrame:
 
     rows_out = []
     for _, mu_row in mu_df.iterrows():
-        mn = _norm_name(mu_row["mu_name"])
+        nmn = _norm_name(mu_row["mu_name"])
+        net_row = None
 
-        if mn in net_norm_index.index:
-            net_matches = net_norm_index.loc[mn]
+        if nmn in net_norm_index.index:
+            net_matches = net_norm_index.loc[nmn]
             if isinstance(net_matches, pd.DataFrame):
                 net_row = net_matches.iloc[0].to_dict()
             else:
                 net_row = net_matches.to_dict()
         else:
-            # Partial-containment fallback
-            net_row = None
-            for _, nr in net.iterrows():
-                if mn in nr["_norm"] or nr["_norm"] in mn:
-                    net_row = nr.to_dict()
-                    break
+            # Fallback for known aliases
+            mu_name = mu_row["mu_name"]
+            net_name_alias = ALIAS_MAP.get(mu_name)
+            if net_name_alias:
+                anorm = _norm_name(net_name_alias)
+                if anorm in net_norm_index.index:
+                    amode = net_norm_index.loc[anorm]
+                    net_row = amode.iloc[0].to_dict() if isinstance(amode, pd.DataFrame) else amode.to_dict()
+            
             if net_row is None:
+                # Still missing - create empty row
                 net_row = {c: None for c in net.columns}
-                net_row["team_name"] = mu_row["mu_name"]
 
-        # Play-in slots keep the combined name (e.g. "TEX/NCSU")
-        if "/" in mu_row["mu_name"]:
-            net_row["team_name"] = mu_row["mu_name"]
+        # Always use the name from the matchups file as the primary name
+        net_row["team_name"] = mu_row["mu_name"]
 
         net_row["seed_num"]    = mu_row["seed_num"]
         net_row["region"]      = mu_row["region"]

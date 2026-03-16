@@ -22,7 +22,7 @@ with st.sidebar:
     show_team_card = st.checkbox("Show team profile on click", value=True)
     selected_team  = st.selectbox(
         "Highlight team path",
-        ["(none)"] + sorted(load_teams()["team_name"].tolist()),
+        ["(none)"] + sorted(load_teams()["team_name"].dropna().astype(str).tolist()),
         index=0,
     )
 

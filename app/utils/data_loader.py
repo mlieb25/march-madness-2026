@@ -95,7 +95,11 @@ def _assign_seeds_from_matchups(net_df: pd.DataFrame) -> pd.DataFrame:
         mn = _norm_name(mu_row["mu_name"])
 
         if mn in net_norm_index.index:
-            net_row = net_norm_index.loc[mn].to_dict()
+            net_matches = net_norm_index.loc[mn]
+            if isinstance(net_matches, pd.DataFrame):
+                net_row = net_matches.iloc[0].to_dict()
+            else:
+                net_row = net_matches.to_dict()
         else:
             # Partial-containment fallback
             net_row = None

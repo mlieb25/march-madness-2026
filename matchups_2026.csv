@@ -1,0 +1,33 @@
+region,seed1,team1,seed2,team2
+East,1,Duke,16,Siena
+East,8,Ohio State,9,TCU
+East,5,St John's,12,Northern Iowa
+East,4,Kansas,13,CA Baptist
+East,6,Louisville,11,South Florida
+East,3,Michigan St,14,N Dakota St
+East,7,UCLA,10,UCF
+East,2,UConn,15,Furman
+South,1,Florida,16,PV/LEH
+South,8,Clemson,9,Iowa
+South,5,Vanderbilt,12,McNeese
+South,4,Nebraska,13,Troy
+South,6,North Carolina,11,VCU
+South,3,Illinois,14,Penn
+South,7,Saint Mary's,10,Texas A&M
+South,2,Houston,15,Idaho
+West,1,Arizona,16,Long Island
+West,8,Villanova,9,Utah State
+West,5,Wisconsin,12,High Point
+West,4,Arkansas,13,Hawai'i
+West,6,BYU,11,TEX/NCSU
+West,3,Gonzaga,14,Kennesaw St
+West,7,Miami,10,Missouri
+West,2,Purdue,15,Queens
+Midwest,1,Michigan,16,UMBC/HOW
+Midwest,8,Georgia,9,Saint Louis
+Midwest,5,Texas Tech,12,Akron
+Midwest,4,Alabama,13,Hofstra
+Midwest,6,Tennessee,11,M-OH/SMU
+Midwest,3,Virginia,14,Wright St
+Midwest,7,Kentucky,10,Santa Clara
+Midwest,2,Iowa State,15,Tennessee St

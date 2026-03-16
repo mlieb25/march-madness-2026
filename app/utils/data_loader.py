@@ -12,6 +12,7 @@ Priority chain for simulation results:
   2. Run sim_engine in-memory with 5,000 sims  (fallback)
 """
 import json
+import re
 import sys
 import warnings
 from pathlib import Path
@@ -35,6 +36,7 @@ def _seed_region_order(seed_num: int):
     return ["W", "X", "Y", "Z"] if seed_num % 2 == 1 else ["Z", "Y", "X", "W"]
 
 BRACKET_SEED_ORDER = [1, 16, 8, 9, 5, 12, 4, 13, 6, 11, 3, 14, 7, 10, 2, 15]
+REGION_CODE_MAP    = {"East": "W", "West": "X", "South": "Y", "Midwest": "Z"}
 
 
 # ── Private helpers ────────────────────────────────────────────────────────────
@@ -45,6 +47,79 @@ def _parse_record(record: str):
         return int(parts[0]), int(parts[1])
     except Exception:
         return 0, 0
+
+
+def _norm_name(s: str) -> str:
+    """Lowercase, strip parentheticals, remove punctuation for fuzzy matching."""
+    s = str(s).lower()
+    s = re.sub(r"\s*\([^)]*\)", "", s)          # drop (NY), (CA), (FL) etc.
+    s = s.replace(".", "").replace("'", "").replace("-", " ")
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def _assign_seeds_from_matchups(net_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Assign seeds and regions from matchups_2026.csv (actual 2026 bracket).
+    Falls back to algorithmic _assign_seeds() if the file is missing.
+    """
+    matchups_path = _ROOT / "matchups_2026.csv"
+    if not matchups_path.exists():
+        return _assign_seeds(net_df)
+
+    mu = pd.read_csv(matchups_path)
+
+    # Flatten to per-team rows (64 slots; play-in slots use "X/Y" notation)
+    team_rows = []
+    for _, row in mu.iterrows():
+        rcode = REGION_CODE_MAP.get(str(row["region"]).strip(), "W")
+        rname = str(row["region"]).strip()
+        for tcol, scol in [("team1", "seed1"), ("team2", "seed2")]:
+            t = str(row[tcol]).strip()
+            s = int(row[scol])
+            team_rows.append({
+                "mu_name":     t,
+                "seed_num":    s,
+                "region":      rcode,
+                "region_name": rname,
+                "seed_str":    f"{rcode}{s:02d}",
+            })
+    mu_df = pd.DataFrame(team_rows)
+
+    # Build normalised-name index over the NET data
+    net = net_df.copy()
+    net["_norm"] = net["team_name"].apply(_norm_name)
+    net_norm_index = net.set_index("_norm")
+
+    rows_out = []
+    for _, mu_row in mu_df.iterrows():
+        mn = _norm_name(mu_row["mu_name"])
+
+        if mn in net_norm_index.index:
+            net_row = net_norm_index.loc[mn].to_dict()
+        else:
+            # Partial-containment fallback
+            net_row = None
+            for _, nr in net.iterrows():
+                if mn in nr["_norm"] or nr["_norm"] in mn:
+                    net_row = nr.to_dict()
+                    break
+            if net_row is None:
+                net_row = {c: None for c in net.columns}
+                net_row["team_name"] = mu_row["mu_name"]
+
+        # Play-in slots keep the combined name (e.g. "TEX/NCSU")
+        if "/" in mu_row["mu_name"]:
+            net_row["team_name"] = mu_row["mu_name"]
+
+        net_row["seed_num"]    = mu_row["seed_num"]
+        net_row["region"]      = mu_row["region"]
+        net_row["region_name"] = mu_row["region_name"]
+        net_row["seed_str"]    = mu_row["seed_str"]
+        rows_out.append(net_row)
+
+    result = pd.DataFrame(rows_out)
+    result.drop(columns=["_norm"], inplace=True, errors="ignore")
+    return result.reset_index(drop=True)
 
 
 def _assign_seeds(net_df: pd.DataFrame) -> pd.DataFrame:
@@ -129,7 +204,7 @@ def load_teams() -> pd.DataFrame:
         "Quad 1": "quad1",     "Quad 2": "quad2",
         "Quad 3": "quad3",     "Quad 4": "quad4",
     })
-    df = _assign_seeds(net)
+    df = _assign_seeds_from_matchups(net)
     df["wins"]   = df["record"].apply(lambda r: _parse_record(r)[0])
     df["losses"] = df["record"].apply(lambda r: _parse_record(r)[1])
 
